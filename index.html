@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zordha Industries — Natural Stone from India</title>
+    <meta name="description" content="Zordha Industries sources natural granite and stone from India for international buyers, fabricators, architects and project requirements.">
+    <meta name="theme-color" content="#242421">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg: #f4f2ed;
+            --bg-soft: #eae7df;
+            --bg-card: #ece9e1;
+            --dark: #20201d;
+            --dark-soft: #2c2c28;
+            --text: #22221f;
+            --text-secondary: #585650;
+            --muted: #76736c;
+            --line: rgba(34, 34, 31, 0.13);
+            --line-dark: rgba(247, 245, 239, 0.14);
+            --white: #f7f5ef;
+            --max-width: 1360px;
+        }
+
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            text-rendering: optimizeLegibility;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: "DM Sans", Arial, sans-serif;
+            font-size: 15px;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+            transition: opacity 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+        }
+
+        .container {
+            width: min(calc(100% - 56px), var(--max-width));
+            margin: 0 auto;
+        }
+
+        .eyebrow {
+            font-size: 10px;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            font-weight: 500;
+            color: var(--muted);
+            margin-bottom: 14px;
+        }
+
+        .dark-section .eyebrow {
+            color: rgba(247, 245, 239, 0.55);
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            gap: 40px;
+            margin-bottom: 32px;
+            padding-bottom: 18px;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .dark-section .section-header {
+            border-bottom-color: var(--line-dark);
+        }
+
+        .section-header h2 {
+            font-family: "Playfair Display", Georgia, serif;
+            font-size: clamp(34px, 3.8vw, 56px);
+            font-weight: 400;
+            line-height: 1.05;
+            letter-spacing: -0.035em;
+        }
+
+        .section-intro {
+            max-width: 380px;
+            color: var(--muted);
+            font-size: 13px;
+            line-height: 1.6;
+            text-align: right;
+        }
+
+        .dark-section .section-intro {
+            color: rgba(247, 245, 239, 0.6);
+        }
+
+        section {
+            padding: 76px 0;
+        }
+
+        /* HEADER */
+        header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 100;
+            color: var(--white);
+        }
+
+        .navigation {
+            height: 84px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .logo {
+            font-size: 19px;
+            font-weight: 600;
+            letter-spacing: 0.28em;
+            display: inline-block;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+            font-size: 13px;
+            font-weight: 400;
+        }
+
+        .nav-links a {
+            opacity: 0.82;
+        }
+
+        .nav-links a:hover {
+            opacity: 1;
+        }
+
+        .nav-cta {
+            border: 1px solid rgba(255, 255, 255, 0.45);
+            padding: 10px 18px;
+            font-size: 12px;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+        }
+
+        .nav-cta:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.85);
+        }
+
+        /* HERO */
+        .hero {
+            min-height: 580px;
+            height: 78vh;
+            max-height: 760px;
+            position: relative;
+            display: flex;
+            align-items: flex-end;
+            color: var(--white);
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(18, 18, 16, 0.72) 0%,
+                    rgba(18, 18, 16, 0.42) 50%,
+                    rgba(18, 18, 16, 0.18) 100%
+                ),
+                url("images/hero-granite.jpg") center center / cover no-repeat;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(14, 14, 13, 0.65) 0%, transparent 55%);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            padding-bottom: 56px;
+        }
+
+        .hero-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            font-size: 11px;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            opacity: 0.85;
+        }
+
+        .hero h1 {
+            font-family: "Playfair Display", Georgia, serif;
+            font-size: clamp(48px, 6.2vw, 92px);
+            font-weight: 400;
+            line-height: 0.98;
+            letter-spacing: -0.04em;
+            max-width: 900px;
+        }
+
+        .hero-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            gap: 40px;
+            margin-top: 28px;
+        }
+
+        .hero-description {
+            max-width: 540px;
+            font-size: 16px;
+            line-height: 1.65;
+            color: rgba(247, 245, 239, 0.9);
+        }
+
+        .hero-action {
+            display: inline-block;
+            white-space: nowrap;
+            font-size: 13px;
+            letter-spacing: 0.04em;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+            padding-bottom: 6px;
+        }
+
+        .hero-action:hover {
+            border-bottom-color: var(--white);
+            transform: translateY(-1px);
+        }
+
+        /* 01 / INTRO */
+        .intro-grid {
+            display: grid;
+            grid-template-columns: 0.65fr 1.35fr;
+            gap: 80px;
+            align-items: start;
+        }
+
+        .intro-title {
+            font-family: "Playfair Display", Georgia, serif;
+            font-size: clamp(36px, 4.2vw, 58px);
+            font-weight: 400;
+            line-height: 1.05;
+            letter-spacing: -0.035em;
+        }
+
+        .intro-copy {
+            margin-top: 24px;
+            max-width: 660px;
+            color: var(--text-secondary);
+            font-size: 16px;
+            line-height: 1.75;
+        }
+
+        .intro-copy p + p {
+            margin-top: 16px;
+        }
+
+        /* MATERIAL BREAK */
+        .material-break {
+            padding: 0;
+            background: var(--dark);
+        }
+
+        .material-break-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            min-height: 380px;
+        }
+
+        .material-break-image {
+            position: relative;
+            overflow: hidden;
+            background: #181816;
+        }
+
+        .material-break-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.9;
+            transition: transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1);
+        }
+
+        .material-break-grid:hover .material-break-image img {
+            transform: scale(1.03);
+        }
+
+        .material-break-content {
+            padding: 56px 64px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background: var(--dark);
+            color: var(--white);
+            border-left: 1px solid var(--line-dark);
+        }
+
+        .material-break-content h3 {
+            font-family: "Playfair Display", Georgia, serif;
+            font-size: clamp(28px, 3vw, 42px);
+            font-weight: 400;
+            line-height: 1.1;
+            letter-spacing: -0.03em;
+            margin-top: 8px;
+            max-width: 480px;
+        }
+
+        .material-break-content p {
+            margin-top: 18px;
+            color: rgba(247, 245, 239, 0.7);
+            font-size: 14px;
+            line-height: 1.7;
+            max-width: 440px;
+        }
+
+        /* 02 / MATERIAL LIBRARY */
+        .materials {
+            padding-top: 76px;
+        }
+
+        .material-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 16px;
+        }
+
+        .material-card {
+            position: relative;
+            overflow: hidden;
+            background: #252522;
+            color: var(--white);
+        }
+
+        .material-card:nth-child(1) { grid-column: span 7; }
+        .material-card:nth-child(2) { grid-column: span 5; }
+        .material-card:nth-child(3) { grid-column: span 5; }
+        .material-card:nth-child(4) { grid-column: span 7; }
+
+        .material-image {
+            aspect-ratio: 1.45 / 1;
+            overflow: hidden;
+            background: #1c1c1a;
+        }
+
+        .material-card:nth-child(1) .material-image,
+        .material-card:nth-child(4) .material-image {
+            aspect-ratio: 1.6 / 1;
+        }
+
+        .material-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1);
+        }
+
+        .material-card:hover .material-image img {
+            transform: scale(1.035);
+        }
+
+        .material-overlay {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            padding: 24px 26px;
+            background: linear-gradient(to top, rgba(12, 12, 11, 0.75) 0%, rgba(12, 12, 11, 0.35) 60%, transparent 100%);
+            pointer-events: none;
+        }
+
+        .material-index {
+            margin-bottom: 5px;
+            font-size: 10px;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            opacity: 0.7;
+        }
+
+        .material-name {
+            font-family: "Playfair Display", Georgia, serif;
+            font-size: 26px;
+            font-weight: 400;
+            line-height: 1.1;
+        }
+
+        .material-description {
+            margin-top: 3px;
+            font-size: 12px;
+            color: rgba(247, 245, 239, 0.78);
+            letter-spacing: 0.02em;
+        }
+
+        .material-note {
+            margin-top: 24px;
+            color: var(--muted);
+            font-size: 12px;
+            line-height: 1.6;
+            max-width: 680px;
+        }
+
+        /* STATEMENT */
+        .statement {
+            background: var(--dark);
+            color: var(--white);
+        }
+
+        .statement-grid {
+            display: grid;
+            grid-template-columns: 0.7fr 1.3fr;
+            gap: 80px;
+            align-items: start;
+        }
+
+        .statement h2 {
+            font-family: "Playfair Display", Georgia, serif;
+            font-size: clamp(38px, 4.5vw, 64px);
+            font-weight: 400;
+            line-height: 1.05;
+            letter-spacing: -0.035em;
+            max-width: 780px;
+        }
+
+        .statement-copy {
+            max-width: 620px;
+            color: rgba(247, 245, 239, 0.72);
+            font-size: 16px;
+            line-height: 1.75;
+        }
+
+        .statement-copy p + p {
+            margin-top: 18px;
+        }
+
+        /* 03 / B2B */
+        .audience-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            border-top: 1px solid var(--line);
+            border-left: 1px solid var(--line);
+        }
+
+        .audience-card {
+            padding: 24px 22px;
+            border-right: 1px solid var(--line);
+            border-bottom: 1px solid var(--line);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 160px;
+            background: var(--bg);
+            transition: background 0.2s ease;
+        }
+
+        .audience-card:hover {
+            background: var(--bg-card);
+        }
+
+        .audience-number {
+            color: var(--muted);
+            font-size: 10px;
+            letter-spacing: 0.15em;
+            font-weight: 500;
+        }
+
+        .audience-body {
+            margin-top: 20px;
+        }
+
+        .audience-card h3 {
+            font-family: "Playfair Display", Georgia, serif;
+            font-size: 21px;
+            font-weight: 400;
+            line-height: 1.15;
+        }
+
+        .audience-card p {
+            margin-top: 7px;
+            color: var(--text-secondary);
+            font-size: 12px;
+            line-height: 1.55;
+        }
+
+        /* 04 / ABOUT */
+        .about {
+            background: var(--bg-soft);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 0.65fr 1.35fr;
+            gap: 80px;
+            align-items: start;
+        }
+
+        .about-title {
+            font-family: "Playfair Display", Georgia, serif;
+            font-size: clamp(38px, 4.2vw, 60px);
+            font-weight: 400;
+            line-height: 1.05;
+            letter-spacing: -0.035em;
+        }
+
+        .about-copy {
+            max-width: 660px;
+            color: var(--text-secondary);
+            font-size: 15px;
+            line-height: 1.75;
+        }
+
+        .about-copy p + p {
+            margin-top: 16px;
+        }
+
+        /* FOOTER */
+        footer {
+            padding: 42px 0 32px;
+            background: #171715;
+            color: var(--white);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 36px;
+            align-items: start;
+        }
+
+        .footer-logo {
+            font-size: 17px;
+            font-weight: 600;
+            letter-spacing: 0.26em;
+        }
+
+        .footer-small {
+            margin-top: 8px;
+            color: rgba(247, 245, 239, 0.45);
+            font-size: 11px;
+            letter-spacing: 0.04em;
+        }
+
+        .footer-label {
+            margin-bottom: 8px;
+            color: rgba(247, 245, 239, 0.4);
+            font-size: 9px;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+
+        .footer-address {
+            color: rgba(247, 245, 239, 0.65);
+            font-size: 12px;
+            line-height: 1.65;
+        }
+
+        .footer-contact {
+            text-align: right;
+        }
+
+        .footer-email {
+            font-size: 13px;
+            color: rgba(247, 245, 239, 0.75);
+        }
+
+        .footer-email:hover {
+            color: var(--white);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+        }
+
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            gap: 24px;
+            margin-top: 32px;
+            padding-top: 18px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(247, 245, 239, 0.35);
+            font-size: 10px;
+            letter-spacing: 0.03em;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 1024px) {
+            .intro-grid, .statement-grid, .about-grid {
+                grid-template-columns: 1fr;
+                gap: 36px;
+            }
+            .material-break-grid {
+                grid-template-columns: 1fr;
+            }
+            .material-break-content {
+                padding: 42px 36px;
+            }
+            .audience-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .footer-contact {
+                text-align: left;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                width: calc(100% - 36px);
+            }
+            section {
+                padding: 56px 0;
+            }
+            .navigation {
+                height: 72px;
+            }
+            .nav-links {
+                gap: 16px;
+            }
+            .nav-links a:not(.nav-cta) {
+                display: none;
+            }
+            .hero {
+                min-height: 520px;
+                height: 74vh;
+            }
+            .hero-content {
+                padding-bottom: 42px;
+            }
+            .hero-meta span:last-child {
+                display: none;
+            }
+            .hero-bottom {
+                display: block;
+                margin-top: 22px;
+            }
+            .hero-action {
+                margin-top: 18px;
+            }
+            .section-header {
+                display: block;
+            }
+            .section-intro {
+                margin-top: 12px;
+                text-align: left;
+            }
+            .material-card:nth-child(1),
+            .material-card:nth-child(2),
+            .material-card:nth-child(3),
+            .material-card:nth-child(4) {
+                grid-column: span 12;
+            }
+            .material-image {
+                aspect-ratio: 1.5 / 1;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 28px;
+            }
+            .footer-bottom {
+                flex-direction: column;
+                gap: 6px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                width: calc(100% - 28px);
+            }
+            section {
+                padding: 48px 0;
+            }
+            .logo {
+                font-size: 16px;
+            }
+            .nav-cta {
+                padding: 8px 12px;
+                font-size: 11px;
+            }
+            .hero h1 {
+                font-size: clamp(40px, 11vw, 54px);
+            }
+            .hero-description {
+                font-size: 14px;
+            }
+            .material-overlay {
+                padding: 18px 20px;
+            }
+            .material-name {
+                font-size: 22px;
+            }
+            .audience-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="container navigation">
+            <a href="#top" class="logo" aria-label="Zordha Industries home">ZORDHA.</a>
+            <nav class="nav-links">
+                <a href="#materials">Materials</a>
+                <a href="#b2b">B2B</a>
+                <a href="#about">About</a>
+                <a href="mailto:info@zordhaindustries.com?subject=Natural%20Stone%20Enquiry" class="nav-cta">Enquire</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="top">
+
+        <!-- HERO -->
+        <section class="hero">
+            <div class="hero-content">
+                <div class="container">
+                    <div class="hero-meta">
+                        <span>Natural Stone / India</span>
+                        <span>Architecture · Interiors · Fabrication</span>
+                    </div>
+
+                    <h1>Stone for<br>considered spaces.</h1>
+
+                    <div class="hero-bottom">
+                        <p class="hero-description">
+                            Natural granite sourced in India for international buyers, fabricators, architects and project requirements.
+                        </p>
+                        <a href="#materials" class="hero-action">Explore materials ↓</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 01 / INTRODUCTION -->
+        <section>
+            <div class="container intro-grid">
+                <div>
+                    <div class="eyebrow">01 / Zordha</div>
+                </div>
+                <div>
+                    <h2 class="intro-title">Indian natural stone, approached as architectural material.</h2>
+                    <div class="intro-copy">
+                        <p>
+                            Zordha Industries is an India-based natural stone business focused on developing reliable international supply relationships.
+                        </p>
+                        <p>
+                            We work around the material, specification and destination — identifying suitable Indian supply for international B2B requirements.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- VISUAL MATERIAL BREAK -->
+        <section class="material-break dark-section">
+            <div class="material-break-grid">
+                <div class="material-break-image">
+                    <img src="images/granite-black-grey.jpg" alt="Natural Indian granite slab surface" loading="lazy">
+                </div>
+                <div class="material-break-content">
+                    <div class="eyebrow">Material Study</div>
+                    <h3>Geological character with architectural clarity.</h3>
+                    <p>Every quarry and block yields distinct mineral compositions. We work directly with international fabricators to source stone matching exact project requirements.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 02 / MATERIAL LIBRARY -->
+        <section id="materials" class="materials">
+            <div class="container">
+                <div class="section-header">
+                    <div>
+                        <div class="eyebrow">02 / Material Library</div>
+                        <h2>Indian granite.</h2>
+                    </div>
+                    <p class="section-intro">
+                        A starting selection of materials. Specific colour, grade, finish and availability are confirmed per enquiry.
+                    </p>
+                </div>
+
+                <div class="material-grid">
+                    <article class="material-card">
+                        <div class="material-image">
+                            <img src="images/granite-absolute-black.jpg" alt="Absolute Black granite" loading="lazy">
+                        </div>
+                        <div class="material-overlay">
+                            <div class="material-index">01 / Granite</div>
+                            <div class="material-name">Absolute Black</div>
+                            <div class="material-description">Deep black · Fine grain</div>
+                        </div>
+                    </article>
+
+                    <article class="material-card">
+                        <div class="material-image">
+                            <img src="images/granite-black-grey.jpg" alt="Black and grey granite" loading="lazy">
+                        </div>
+                        <div class="material-overlay">
+                            <div class="material-index">02 / Granite</div>
+                            <div class="material-name">Black / Grey</div>
+                            <div class="material-description">Charcoal · Natural mineral variation</div>
+                        </div>
+                    </article>
+
+                    <article class="material-card">
+                        <div class="material-image">
+                            <img src="images/granite-grey.jpg" alt="Grey granite" loading="lazy">
+                        </div>
+                        <div class="material-overlay">
+                            <div class="material-index">03 / Granite</div>
+                            <div class="material-name">Grey Granite</div>
+                            <div class="material-description">Neutral grey · Fine mineral structure</div>
+                        </div>
+                    </article>
+
+                    <article class="material-card">
+                        <div class="material-image">
+                            <img src="images/granite-light.jpg" alt="Light granite" loading="lazy">
+                        </div>
+                        <div class="material-overlay">
+                            <div class="material-index">04 / Granite</div>
+                            <div class="material-name">Light Granite</div>
+                            <div class="material-description">Light grey · Soft natural variation</div>
+                        </div>
+                    </article>
+                </div>
+
+                <p class="material-note">
+                    Natural stone varies by quarry, block and lot. Images shown are representative material studies and do not guarantee a specific available lot.
+                </p>
+            </div>
+        </section>
+
+        <!-- STATEMENT -->
+        <section class="statement dark-section">
+            <div class="container statement-grid">
+                <div>
+                    <div class="eyebrow">Material thinking</div>
+                </div>
+                <div>
+                    <h2>Natural variation deserves precise specification.</h2>
+                    <div class="statement-copy">
+                        <p>
+                            Granite is a natural material. Colour, grain, mineral structure, finish and surface characteristics can vary between blocks and lots.
+                        </p>
+                        <p>
+                            That is why we treat specification as an important part of the sourcing process — not simply as a product name.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 03 / B2B CUSTOMERS -->
+        <section id="b2b">
+            <div class="container">
+                <div class="section-header">
+                    <div>
+                        <div class="eyebrow">03 / B2B</div>
+                        <h2>Who we work with.</h2>
+                    </div>
+                    <p class="section-intro">
+                        Different buyers require different formats, specifications and commercial approaches.
+                    </p>
+                </div>
+
+                <div class="audience-grid">
+                    <article class="audience-card">
+                        <div class="audience-number">01</div>
+                        <div class="audience-body">
+                            <h3>Stone Fabricators</h3>
+                            <p>Material for further cutting, fabrication and finished work.</p>
+                        </div>
+                    </article>
+
+                    <article class="audience-card">
+                        <div class="audience-number">02</div>
+                        <div class="audience-body">
+                            <h3>Importers &amp; Distributors</h3>
+                            <p>Indian stone supply for companies serving their own local markets.</p>
+                        </div>
+                    </article>
+
+                    <article class="audience-card">
+                        <div class="audience-number">03</div>
+                        <div class="audience-body">
+                            <h3>Architects &amp; Designers</h3>
+                            <p>Material exploration around aesthetic and technical requirements.</p>
+                        </div>
+                    </article>
+
+                    <article class="audience-card">
+                        <div class="audience-number">04</div>
+                        <div class="audience-body">
+                            <h3>Project Buyers</h3>
+                            <p>Stone requirements defined by project quantity and specification.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- 04 / ABOUT -->
+        <section id="about" class="about">
+            <div class="container about-grid">
+                <div>
+                    <div class="eyebrow">04 / About Zordha</div>
+                    <h2 class="about-title">An India-based stone business.</h2>
+                </div>
+
+                <div class="about-copy">
+                    <p>
+                        Zordha Industries is based in Kottayam, Kerala, India, and is developing an international natural stone sourcing business.
+                    </p>
+                    <p>
+                        Our focus is on building reliable relationships between international B2B requirements and suitable Indian stone supply.
+                    </p>
+                    <p>
+                        We are building the business step by step, with emphasis on material understanding, supplier validation, specification, quality and commercially viable international supply.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container footer-grid">
+            <div>
+                <div class="footer-logo">ZORDHA.</div>
+                <div class="footer-small">Natural Stone · India</div>
+            </div>
+
+            <div>
+                <div class="footer-label">Office</div>
+                <div class="footer-address">
+                    B28, Anjanasree Arcade<br>
+                    Annankunnu Road, Nagampadam<br>
+                    Kottayam, Kerala 686001<br>
+                    India
+                </div>
+            </div>
+
+            <div class="footer-contact">
+                <div class="footer-label">Contact</div>
+                <a href="mailto:info@zordhaindustries.com" class="footer-email">
+                    info@zordhaindustries.com
+                </a>
+            </div>
+        </div>
+
+        <div class="container footer-bottom">
+            <div>© 2026 Zordha Industries</div>
+            <div>Natural Stone Sourcing · India</div>
+        </div>
+    </footer>
+
+</body>
+</html>
