@@ -3,31 +3,126 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zordha Industries — Natural Stone from India</title>
-    <meta name="description" content="Zordha Industries sources natural granite and stone from India for international buyers, fabricators, architects and project requirements.">
-    <meta name="theme-color" content="#242421">
+    <title>Zordha Industries | Indian Granite &amp; Natural Stone Supplier</title>
+    <meta name="description" content="Zordha Industries sources natural granite and stone from India for international B2B buyers, importers, fabricators, architects and project requirements. Specification, lot verification, and reliable export supply.">
+    <meta name="keywords" content="Indian granite, natural stone supplier, granite slabs India, Absolute Black granite, granite export India, stone fabricators, B2B natural stone">
+    <meta name="author" content="Zordha Industries Pvt Ltd">
+    <meta name="theme-color" content="#1C1C1A">
+    <link rel="canonical" href="https://zordhaindustries.com/">
 
-    <!-- Google Fonts -->
+    <!-- Open Graph / Social Meta -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://zordhaindustries.com/">
+    <meta property="og:title" content="Zordha Industries | Indian Granite &amp; Natural Stone Supplier">
+    <meta property="og:description" content="Indian granite and natural stone sourced for international B2B requirements. Sourcing, specification and quality verification from India.">
+    <meta property="og:image" content="https://zordhaindustries.com/images/hero-granite.jpg">
+
+    <!-- Twitter / X Meta -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://zordhaindustries.com/">
+    <meta name="twitter:title" content="Zordha Industries | Indian Granite &amp; Natural Stone Supplier">
+    <meta name="twitter:description" content="Indian granite and natural stone sourced for international B2B requirements. Sourcing, specification and quality verification from India.">
+    <meta name="twitter:image" content="https://zordhaindustries.com/images/hero-granite.jpg">
+
+    <!-- Favicon & Icons -->
+    <link rel="icon" type="image/jpeg" href="images/zordha-favicon.jpg">
+    <link rel="apple-touch-icon" href="images/zordha-favicon.jpg">
+
+    <!-- Google Fonts: Playfair Display for editorial headlines, DM Sans for clean architectural body -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
 
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://zordhaindustries.com/#organization",
+          "name": "Zordha Industries Pvt Ltd",
+          "url": "https://zordhaindustries.com",
+          "logo": "https://zordhaindustries.com/favicon.svg",
+          "email": "info@zordhaindustries.com",
+          "description": "India-based natural stone and granite sourcing business connecting international B2B requirements with reliable Indian stone supply.",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "B28, Anjanasree Arcade, Annankunnu Road, Nagampadam",
+            "addressLocality": "Kottayam",
+            "addressRegion": "Kerala",
+            "postalCode": "686001",
+            "addressCountry": "IN"
+          }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://zordhaindustries.com/#website",
+          "url": "https://zordhaindustries.com",
+          "name": "Zordha Industries",
+          "publisher": {
+            "@id": "https://zordhaindustries.com/#organization"
+          }
+        }
+      ]
+    }
+    </script>
+
     <style>
+        /* ==========================================================================
+           1. CORE DESIGN SYSTEM & TOKENS
+           ========================================================================== */
         :root {
-            --bg: #f4f2ed;
-            --bg-soft: #eae7df;
-            --bg-card: #ece9e1;
-            --dark: #20201d;
-            --dark-soft: #2c2c28;
-            --text: #22221f;
+            /* Palette */
+            --bg-light: #F4F2ED;
+            --bg-soft: #EAE7DF;
+            --bg-card: #ECE9E1;
+            --dark: #1C1C1A;
+            --dark-surface: #242421;
+            --dark-card: #292A27;
+            --text: #20201D;
             --text-secondary: #585650;
-            --muted: #76736c;
-            --line: rgba(34, 34, 31, 0.13);
-            --line-dark: rgba(247, 245, 239, 0.14);
-            --white: #f7f5ef;
+            --text-muted: #76736C;
+            --line-light: rgba(32, 32, 29, 0.12);
+            --line-dark: rgba(244, 242, 237, 0.14);
+            --white: #F4F2ED;
+
+            /* Spacing scale */
+            --space-4: 4px;
+            --space-8: 8px;
+            --space-12: 12px;
+            --space-16: 16px;
+            --space-24: 24px;
+            --space-32: 32px;
+            --space-48: 48px;
+            --space-64: 64px;
+            --space-80: 80px;
+            --space-96: 96px;
+            --space-120: 120px;
+            --space-160: 160px;
+
+            /* Layout */
             --max-width: 1360px;
+            --header-h: 84px;
+
+            /* Typography */
+            --font-serif: "Playfair Display", Georgia, "Times New Roman", serif;
+            --font-sans: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
+            /* Transitions */
+            --ease-fast: 0.22s cubic-bezier(0.4, 0, 0.2, 1);
+            --ease-smooth: 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+            --ease-image: 1.4s cubic-bezier(0.16, 1, 0.3, 1);
+            --ease-reveal: 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+
+            /* Premium Accent */
+            --gold: #C8A96E;
+            --gold-muted: rgba(200, 169, 110, 0.55);
         }
 
+        /* ==========================================================================
+           2. BASE RESETS & GLOBAL STYLES
+           ========================================================================== */
         *, *::before, *::after {
             margin: 0;
             padding: 0;
@@ -37,16 +132,22 @@
         html {
             scroll-behavior: smooth;
             text-rendering: optimizeLegibility;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
 
         body {
-            background: var(--bg);
+            background-color: var(--bg-light);
             color: var(--text);
-            font-family: "DM Sans", Arial, sans-serif;
+            font-family: var(--font-sans);
             font-size: 15px;
-            line-height: 1.6;
-            -webkit-font-smoothing: antialiased;
+            line-height: 1.65;
+            letter-spacing: 0.01em;
             overflow-x: hidden;
+        }
+
+        body.no-scroll {
+            overflow: hidden;
         }
 
         img {
@@ -58,35 +159,88 @@
         a {
             color: inherit;
             text-decoration: none;
-            transition: opacity 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+            transition: opacity var(--ease-fast), border-color var(--ease-fast), color var(--ease-fast), background-color var(--ease-fast);
+        }
+
+        button, input, select, textarea {
+            font: inherit;
+            color: inherit;
+        }
+
+        button {
+            cursor: pointer;
+            background: none;
+            border: none;
+        }
+
+        :focus-visible {
+            outline: 2px solid var(--text);
+            outline-offset: 3px;
+        }
+
+        .dark-section :focus-visible {
+            outline: 2px solid var(--white);
         }
 
         .container {
             width: min(calc(100% - 56px), var(--max-width));
-            margin: 0 auto;
+            margin-inline: auto;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                width: min(calc(100% - 36px), var(--max-width));
+            }
+        }
+
+        /* Section Spacing & Scroll Margins */
+        section {
+            padding: clamp(64px, 7vw, 100px) 0;
+            position: relative;
+            scroll-margin-top: var(--header-h);
+        }
+
+        .dark-section {
+            background-color: var(--dark);
+            color: var(--white);
         }
 
         .eyebrow {
-            font-size: 10px;
+            font-size: 11px;
             letter-spacing: 0.2em;
             text-transform: uppercase;
-            font-weight: 500;
-            color: var(--muted);
-            margin-bottom: 14px;
+            font-weight: 600;
+            color: var(--text-muted);
+            margin-bottom: var(--space-12);
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .eyebrow::before {
+            content: '';
+            display: inline-block;
+            width: 20px;
+            height: 1px;
+            background: var(--gold-muted);
+        }
+
+        .dark-section .eyebrow::before {
+            background: var(--gold);
         }
 
         .dark-section .eyebrow {
-            color: rgba(247, 245, 239, 0.55);
+            color: var(--gold-muted);
         }
 
         .section-header {
             display: flex;
             justify-content: space-between;
             align-items: flex-end;
-            gap: 40px;
-            margin-bottom: 32px;
-            padding-bottom: 18px;
-            border-bottom: 1px solid var(--line);
+            gap: var(--space-32);
+            margin-bottom: var(--space-48);
+            padding-bottom: var(--space-20);
+            border-bottom: 1px solid var(--line-light);
         }
 
         .dark-section .section-header {
@@ -94,7 +248,7 @@
         }
 
         .section-header h2 {
-            font-family: "Playfair Display", Georgia, serif;
+            font-family: var(--font-serif);
             font-size: clamp(34px, 3.8vw, 56px);
             font-weight: 400;
             line-height: 1.05;
@@ -102,80 +256,186 @@
         }
 
         .section-intro {
-            max-width: 380px;
-            color: var(--muted);
-            font-size: 13px;
-            line-height: 1.6;
+            max-width: 440px;
+            color: var(--text-secondary);
+            font-size: 14px;
+            line-height: 1.65;
             text-align: right;
         }
 
         .dark-section .section-intro {
-            color: rgba(247, 245, 239, 0.6);
+            color: rgba(244, 242, 237, 0.65);
         }
 
-        section {
-            padding: 76px 0;
-        }
-
-        /* HEADER */
-        header {
+        /* Skip link */
+        .skip-link {
             position: absolute;
+            top: -100px;
+            left: 20px;
+            background: var(--dark);
+            color: var(--white);
+            padding: 10px 18px;
+            z-index: 9999;
+            font-size: 13px;
+            transition: top 0.2s ease;
+        }
+        .skip-link:focus { top: 20px; }
+
+        /* ==========================================================================
+           3. HEADER & NAVIGATION
+           ========================================================================== */
+        header {
+            position: fixed;
             top: 0;
             left: 0;
             width: 100%;
-            z-index: 100;
+            z-index: 1000;
             color: var(--white);
+            background: linear-gradient(to bottom, rgba(20, 20, 18, 0.8) 0%, rgba(20, 20, 18, 0.3) 60%, transparent 100%);
+            transition: background-color var(--ease-smooth), backdrop-filter var(--ease-smooth), border-color var(--ease-smooth);
         }
 
-        .navigation {
-            height: 84px;
+        header.scrolled {
+            background-color: rgba(28, 28, 26, 0.95);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--line-dark);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+        }
+
+        .nav-wrapper {
+            height: var(--header-h);
             display: flex;
             align-items: center;
             justify-content: space-between;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
         }
 
         .logo {
             font-size: 19px;
             font-weight: 600;
             letter-spacing: 0.28em;
+            color: var(--white);
             display: inline-block;
         }
 
         .nav-links {
             display: flex;
             align-items: center;
-            gap: 32px;
+            gap: var(--space-32);
+            list-style: none;
+        }
+
+        .nav-links a:not(.nav-cta) {
             font-size: 13px;
-            font-weight: 400;
+            font-weight: 500;
+            letter-spacing: 0.04em;
+            opacity: 0.85;
+            position: relative;
         }
 
-        .nav-links a {
-            opacity: 0.82;
+        .nav-links a:not(.nav-cta)::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: var(--gold);
+            transition: width 0.5s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
-        .nav-links a:hover {
+        .nav-links a:not(.nav-cta):hover {
             opacity: 1;
         }
 
+        .nav-links a:not(.nav-cta):hover::after {
+            width: 100%;
+        }
+
         .nav-cta {
-            border: 1px solid rgba(255, 255, 255, 0.45);
-            padding: 10px 18px;
+            border: 1px solid rgba(244, 242, 237, 0.5);
+            padding: 9px 20px;
             font-size: 12px;
-            letter-spacing: 0.04em;
+            font-weight: 600;
+            letter-spacing: 0.08em;
             text-transform: uppercase;
+            background: rgba(244, 242, 237, 0.06);
+            color: var(--white);
+            transition: background var(--ease-fast), color var(--ease-fast), border-color var(--ease-fast);
         }
 
         .nav-cta:hover {
-            background: rgba(255, 255, 255, 0.1);
-            border-color: rgba(255, 255, 255, 0.85);
+            background: var(--white);
+            color: var(--dark);
+            border-color: var(--white);
         }
 
-        /* HERO */
+        /* Mobile Hamburger */
+        .menu-toggle {
+            display: none;
+            width: 44px;
+            height: 44px;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 6px;
+            cursor: pointer;
+            z-index: 1100;
+        }
+
+        .menu-toggle span {
+            display: block;
+            width: 24px;
+            height: 1.5px;
+            background-color: var(--white);
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+
+        .menu-toggle.active span:nth-child(1) { transform: translateY(7.5px) rotate(45deg); }
+        .menu-toggle.active span:nth-child(2) { opacity: 0; }
+        .menu-toggle.active span:nth-child(3) { transform: translateY(-7.5px) rotate(-45deg); }
+
+        .mobile-drawer {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: var(--dark);
+            z-index: 1050;
+            padding: 110px var(--space-32) var(--space-48);
+            flex-direction: column;
+            justify-content: space-between;
+            transform: translateX(100%);
+            transition: transform var(--ease-smooth);
+        }
+
+        .mobile-drawer.open { transform: translateX(0); }
+
+        .mobile-nav-links {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-24);
+        }
+
+        .mobile-nav-links a {
+            font-family: var(--font-serif);
+            font-size: 28px;
+            color: var(--white);
+            display: block;
+            border-bottom: 1px solid var(--line-dark);
+            padding-bottom: var(--space-12);
+        }
+
+        /* ==========================================================================
+           4. HERO SECTION
+           ========================================================================== */
         .hero {
             min-height: 580px;
-            height: 78vh;
-            max-height: 760px;
+            height: 82vh;
+            max-height: 800px;
             position: relative;
             display: flex;
             align-items: flex-end;
@@ -183,18 +443,19 @@
             background:
                 linear-gradient(
                     90deg,
-                    rgba(18, 18, 16, 0.72) 0%,
-                    rgba(18, 18, 16, 0.42) 50%,
-                    rgba(18, 18, 16, 0.18) 100%
+                    rgba(18, 18, 16, 0.78) 0%,
+                    rgba(18, 18, 16, 0.48) 50%,
+                    rgba(18, 18, 16, 0.22) 100%
                 ),
                 url("images/hero-granite.jpg") center center / cover no-repeat;
+            padding: 0;
         }
 
         .hero::after {
             content: "";
             position: absolute;
             inset: 0;
-            background: linear-gradient(to top, rgba(14, 14, 13, 0.65) 0%, transparent 55%);
+            background: linear-gradient(to top, rgba(14, 14, 13, 0.7) 0%, transparent 55%);
             pointer-events: none;
         }
 
@@ -214,15 +475,16 @@
             letter-spacing: 0.18em;
             text-transform: uppercase;
             opacity: 0.85;
+            font-weight: 500;
         }
 
         .hero h1 {
-            font-family: "Playfair Display", Georgia, serif;
-            font-size: clamp(48px, 6.2vw, 92px);
+            font-family: var(--font-serif);
+            font-size: clamp(48px, 6.2vw, 90px);
             font-weight: 400;
             line-height: 0.98;
             letter-spacing: -0.04em;
-            max-width: 900px;
+            max-width: 920px;
         }
 
         .hero-bottom {
@@ -230,31 +492,43 @@
             justify-content: space-between;
             align-items: flex-end;
             gap: 40px;
-            margin-top: 28px;
+            margin-top: 32px;
         }
 
         .hero-description {
-            max-width: 540px;
+            max-width: 560px;
             font-size: 16px;
             line-height: 1.65;
-            color: rgba(247, 245, 239, 0.9);
+            color: rgba(244, 242, 237, 0.92);
         }
 
-        .hero-action {
+        .hero-actions {
+            display: flex;
+            align-items: center;
+            gap: var(--space-24);
+            flex-shrink: 0;
+        }
+
+        .hero-action-primary {
             display: inline-block;
             white-space: nowrap;
             font-size: 13px;
-            letter-spacing: 0.04em;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            border-bottom: 1px solid var(--gold-muted);
             padding-bottom: 6px;
+            font-weight: 500;
+            transition: border-color 0.5s cubic-bezier(0.16, 1, 0.3, 1), transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
-        .hero-action:hover {
-            border-bottom-color: var(--white);
-            transform: translateY(-1px);
+        .hero-action-primary:hover {
+            border-bottom-color: var(--gold);
+            transform: translateY(-2px);
         }
 
-        /* 01 / INTRO */
+        /* ==========================================================================
+           5. SECTION 01: INTRODUCTION
+           ========================================================================== */
         .intro-grid {
             display: grid;
             grid-template-columns: 0.65fr 1.35fr;
@@ -263,7 +537,7 @@
         }
 
         .intro-title {
-            font-family: "Playfair Display", Georgia, serif;
+            font-family: var(--font-serif);
             font-size: clamp(36px, 4.2vw, 58px);
             font-weight: 400;
             line-height: 1.05;
@@ -282,7 +556,9 @@
             margin-top: 16px;
         }
 
-        /* MATERIAL BREAK */
+        /* ==========================================================================
+           6. MATERIAL BREAK (EDITORIAL SPLIT)
+           ========================================================================== */
         .material-break {
             padding: 0;
             background: var(--dark);
@@ -291,7 +567,7 @@
         .material-break-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            min-height: 380px;
+            min-height: 400px;
         }
 
         .material-break-image {
@@ -304,12 +580,15 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            opacity: 0.9;
-            transition: transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1);
+            opacity: 0.92;
+            will-change: transform;
+            transition: transform 2.5s cubic-bezier(0.16, 1, 0.3, 1),
+                        opacity   2.5s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
         .material-break-grid:hover .material-break-image img {
-            transform: scale(1.03);
+            transform: scale(1.04);
+            opacity: 1;
         }
 
         .material-break-content {
@@ -323,7 +602,7 @@
         }
 
         .material-break-content h3 {
-            font-family: "Playfair Display", Georgia, serif;
+            font-family: var(--font-serif);
             font-size: clamp(28px, 3vw, 42px);
             font-weight: 400;
             line-height: 1.1;
@@ -334,21 +613,23 @@
 
         .material-break-content p {
             margin-top: 18px;
-            color: rgba(247, 245, 239, 0.7);
+            color: rgba(244, 242, 237, 0.72);
             font-size: 14px;
             line-height: 1.7;
             max-width: 440px;
         }
 
-        /* 02 / MATERIAL LIBRARY */
-        .materials {
-            padding-top: 76px;
+        /* ==========================================================================
+           7. SECTION 02: MATERIAL LIBRARY (PRESERVED ARCHITECTURAL CARDS)
+           ========================================================================== */
+        .materials-section {
+            padding-top: 84px;
         }
 
         .material-grid {
             display: grid;
             grid-template-columns: repeat(12, 1fr);
-            gap: 16px;
+            gap: 18px;
         }
 
         .material-card {
@@ -356,6 +637,14 @@
             overflow: hidden;
             background: #252522;
             color: var(--white);
+            cursor: pointer;
+            display: block;
+            outline: 1px solid transparent;
+            transition: outline-color var(--ease-smooth);
+        }
+
+        .material-card:hover {
+            outline-color: rgba(200, 169, 110, 0.35);
         }
 
         .material-card:nth-child(1) { grid-column: span 7; }
@@ -367,6 +656,7 @@
             aspect-ratio: 1.45 / 1;
             overflow: hidden;
             background: #1c1c1a;
+            position: relative;
         }
 
         .material-card:nth-child(1) .material-image,
@@ -378,11 +668,14 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1);
+            will-change: transform;
+            transition: transform 2.5s cubic-bezier(0.16, 1, 0.3, 1),
+                        opacity   2.5s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
         .material-card:hover .material-image img {
-            transform: scale(1.035);
+            transform: scale(1.06);
+            opacity: 0.92;
         }
 
         .material-overlay {
@@ -390,42 +683,124 @@
             left: 0;
             bottom: 0;
             width: 100%;
-            padding: 24px 26px;
-            background: linear-gradient(to top, rgba(12, 12, 11, 0.75) 0%, rgba(12, 12, 11, 0.35) 60%, transparent 100%);
-            pointer-events: none;
+            padding: 32px 30px;
+            background: linear-gradient(to top, rgba(12, 12, 11, 0.88) 0%, rgba(12, 12, 11, 0.4) 65%, transparent 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            transition: background var(--ease-smooth);
+        }
+
+        .material-card:hover .material-overlay {
+            background: linear-gradient(to top, rgba(12, 12, 11, 0.95) 0%, rgba(12, 12, 11, 0.55) 70%, transparent 100%);
         }
 
         .material-index {
-            margin-bottom: 5px;
+            margin-bottom: 6px;
             font-size: 10px;
-            letter-spacing: 0.16em;
+            letter-spacing: 0.22em;
             text-transform: uppercase;
-            opacity: 0.7;
+            color: var(--gold-muted);
+            font-weight: 600;
         }
 
         .material-name {
-            font-family: "Playfair Display", Georgia, serif;
+            font-family: var(--font-serif);
             font-size: 26px;
             font-weight: 400;
             line-height: 1.1;
+            color: var(--white);
         }
 
         .material-description {
-            margin-top: 3px;
-            font-size: 12px;
-            color: rgba(247, 245, 239, 0.78);
+            margin-top: 4px;
+            font-size: 13px;
+            color: rgba(244, 242, 237, 0.8);
             letter-spacing: 0.02em;
         }
 
-        .material-note {
-            margin-top: 24px;
-            color: var(--muted);
-            font-size: 12px;
-            line-height: 1.6;
-            max-width: 680px;
+        .material-spec-link {
+            margin-top: 14px;
+            font-size: 10px;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            font-weight: 600;
+            color: var(--gold);
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            opacity: 0;
+            transform: translateY(4px);
+            transition: opacity var(--ease-smooth), transform var(--ease-smooth);
         }
 
-        /* STATEMENT */
+        .material-card:hover .material-spec-link {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .material-note {
+            margin-top: 28px;
+            color: var(--text-muted);
+            font-size: 12px;
+            line-height: 1.65;
+            max-width: 720px;
+        }
+
+        /* ==========================================================================
+           8. SOURCING & QUALITY CONTROL WORKFLOW
+           ========================================================================== */
+        .workflow-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            border-top: 1px solid var(--line-dark);
+            border-left: 1px solid var(--line-dark);
+            margin-top: var(--space-32);
+        }
+
+        .workflow-card {
+            padding: 32px 24px;
+            border-right: 1px solid var(--line-dark);
+            border-bottom: 1px solid var(--line-dark);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 240px;
+            background: var(--dark);
+            transition: background var(--ease-fast);
+        }
+
+        .workflow-card:hover {
+            background: #232320;
+        }
+
+        .workflow-step {
+            font-size: 10px;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            font-weight: 600;
+            color: var(--gold-muted);
+        }
+
+        .workflow-card h3 {
+            font-family: var(--font-serif);
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 1.15;
+            color: var(--white);
+            margin-top: 16px;
+            margin-bottom: 8px;
+        }
+
+        .workflow-card p {
+            color: rgba(244, 242, 237, 0.7);
+            font-size: 12px;
+            line-height: 1.6;
+        }
+
+        /* ==========================================================================
+           9. STATEMENT SECTION
+           ========================================================================== */
         .statement {
             background: var(--dark);
             color: var(--white);
@@ -439,7 +814,7 @@
         }
 
         .statement h2 {
-            font-family: "Playfair Display", Georgia, serif;
+            font-family: var(--font-serif);
             font-size: clamp(38px, 4.5vw, 64px);
             font-weight: 400;
             line-height: 1.05;
@@ -449,7 +824,7 @@
 
         .statement-copy {
             max-width: 620px;
-            color: rgba(247, 245, 239, 0.72);
+            color: rgba(244, 242, 237, 0.72);
             font-size: 16px;
             line-height: 1.75;
         }
@@ -458,24 +833,26 @@
             margin-top: 18px;
         }
 
-        /* 03 / B2B */
+        /* ==========================================================================
+           10. SECTION 03: B2B AUDIENCE
+           ========================================================================== */
         .audience-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            border-top: 1px solid var(--line);
-            border-left: 1px solid var(--line);
+            border-top: 1px solid var(--line-light);
+            border-left: 1px solid var(--line-light);
         }
 
         .audience-card {
-            padding: 24px 22px;
-            border-right: 1px solid var(--line);
-            border-bottom: 1px solid var(--line);
+            padding: 32px 26px;
+            border-right: 1px solid var(--line-light);
+            border-bottom: 1px solid var(--line-light);
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            min-height: 160px;
-            background: var(--bg);
-            transition: background 0.2s ease;
+            min-height: 200px;
+            background: var(--bg-light);
+            transition: background var(--ease-fast);
         }
 
         .audience-card:hover {
@@ -483,10 +860,10 @@
         }
 
         .audience-number {
-            color: var(--muted);
+            color: var(--gold-muted);
             font-size: 10px;
-            letter-spacing: 0.15em;
-            font-weight: 500;
+            letter-spacing: 0.16em;
+            font-weight: 600;
         }
 
         .audience-body {
@@ -494,20 +871,85 @@
         }
 
         .audience-card h3 {
-            font-family: "Playfair Display", Georgia, serif;
+            font-family: var(--font-serif);
             font-size: 21px;
             font-weight: 400;
             line-height: 1.15;
+            color: var(--text);
         }
 
         .audience-card p {
-            margin-top: 7px;
+            margin-top: 8px;
             color: var(--text-secondary);
-            font-size: 12px;
-            line-height: 1.55;
+            font-size: 13px;
+            line-height: 1.6;
         }
 
-        /* 04 / ABOUT */
+        /* ==========================================================================
+           11. SECTION 05: TECHNICAL REFERENCE & FINISH SPECIFICATION GUIDE
+           ========================================================================== */
+        .tech-spec-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .tech-spec-box {
+            background: var(--bg-card);
+            border: 1px solid var(--line-light);
+            padding: 36px 32px;
+        }
+
+        .tech-spec-box h3 {
+            font-family: var(--font-serif);
+            font-size: 24px;
+            font-weight: 400;
+            margin-bottom: 8px;
+            color: var(--text);
+        }
+
+        .tech-spec-box .box-sub {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 24px;
+        }
+
+        .spec-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .spec-table tr {
+            border-bottom: 1px solid var(--line-light);
+        }
+
+        .spec-table tr:last-child {
+            border-bottom: none;
+        }
+
+        .spec-table th {
+            text-align: left;
+            padding: 14px 12px 14px 0;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            color: var(--text);
+            width: 32%;
+            vertical-align: top;
+        }
+
+        .spec-table td {
+            padding: 14px 0;
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            vertical-align: top;
+        }
+
+        /* ==========================================================================
+           12. SECTION 04: ABOUT ZORDHA
+           ========================================================================== */
         .about {
             background: var(--bg-soft);
         }
@@ -520,7 +962,7 @@
         }
 
         .about-title {
-            font-family: "Playfair Display", Georgia, serif;
+            font-family: var(--font-serif);
             font-size: clamp(38px, 4.2vw, 60px);
             font-weight: 400;
             line-height: 1.05;
@@ -538,112 +980,463 @@
             margin-top: 16px;
         }
 
-        /* FOOTER */
+        /* ==========================================================================
+           13. SECTION 06: B2B COMMERCIAL ENQUIRY ENGINE
+           ========================================================================== */
+        .enquiry-section {
+            background: var(--dark);
+            color: var(--white);
+        }
+
+        .enquiry-grid {
+            display: grid;
+            grid-template-columns: 0.7fr 1.3fr;
+            gap: 80px;
+            align-items: start;
+        }
+
+        .enquiry-info h2 {
+            font-family: var(--font-serif);
+            font-size: clamp(36px, 4vw, 56px);
+            font-weight: 400;
+            line-height: 1.05;
+            letter-spacing: -0.035em;
+            color: var(--white);
+            margin-bottom: 20px;
+        }
+
+        .enquiry-info p {
+            font-size: 15px;
+            color: rgba(244, 242, 237, 0.75);
+            line-height: 1.7;
+            max-width: 440px;
+        }
+
+        .enquiry-contact-card {
+            margin-top: 36px;
+            padding: 24px;
+            background: rgba(244, 242, 237, 0.04);
+            border: 1px solid var(--line-dark);
+            border-left: 2px solid var(--gold);
+        }
+
+        .enquiry-contact-label {
+            font-size: 10px;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: rgba(244, 242, 237, 0.45);
+            margin-bottom: 6px;
+        }
+
+        .enquiry-contact-val {
+            font-size: 14px;
+            color: var(--white);
+        }
+
+        .enquiry-form-wrap {
+            background: rgba(244, 242, 237, 0.03);
+            border: 1px solid var(--line-dark);
+            padding: 44px 40px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .form-group.full {
+            grid-column: span 2;
+        }
+
+        .form-label {
+            font-size: 11px;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: rgba(244, 242, 237, 0.7);
+            font-weight: 500;
+        }
+
+        .form-label span.req { color: #E2A080; }
+
+        .form-input, .form-select, .form-textarea {
+            width: 100%;
+            background: rgba(244, 242, 237, 0.06);
+            border: 1px solid rgba(244, 242, 237, 0.18);
+            color: var(--white);
+            padding: 12px 14px;
+            font-size: 14px;
+            transition: border-color var(--ease-fast), background var(--ease-fast);
+        }
+
+        .form-input:focus, .form-select:focus, .form-textarea:focus {
+            outline: none;
+            border-color: var(--white);
+            background: rgba(244, 242, 237, 0.1);
+        }
+
+        .form-select option {
+            background: var(--dark);
+            color: var(--white);
+        }
+
+        .form-textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .form-footer {
+            margin-top: 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .form-note {
+            font-size: 11px;
+            color: rgba(244, 242, 237, 0.45);
+            line-height: 1.5;
+            max-width: 340px;
+        }
+
+        .btn-submit {
+            background: var(--white);
+            color: var(--dark);
+            padding: 14px 36px;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            border: 1px solid var(--white);
+            transition: background 0.45s cubic-bezier(0.16, 1, 0.3, 1), color 0.45s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+            flex-shrink: 0;
+        }
+
+        .btn-submit:hover {
+            background: var(--gold);
+            color: var(--dark);
+            border-color: var(--gold);
+        }
+
+        .form-success-box {
+            display: none;
+            padding: 32px;
+            background: rgba(46, 90, 68, 0.25);
+            border: 1px solid rgba(46, 90, 68, 0.6);
+            text-align: center;
+        }
+
+        .form-success-box h3 {
+            font-family: var(--font-serif);
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: var(--white);
+        }
+
+        .form-success-box p {
+            font-size: 14px;
+            color: rgba(244, 242, 237, 0.85);
+        }
+
+        /* ==========================================================================
+           14. MATERIAL SPECIFICATION MODAL
+           ========================================================================== */
+        .modal-backdrop {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(14, 14, 13, 0.82);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+            opacity: 0;
+            transition: opacity var(--ease-smooth);
+        }
+
+        .modal-backdrop.open {
+            display: flex;
+            opacity: 1;
+        }
+
+        .spec-modal {
+            background: var(--dark);
+            color: var(--white);
+            width: min(100%, 880px);
+            max-height: 90vh;
+            overflow-y: auto;
+            border: 1px solid var(--line-dark);
+            position: relative;
+            box-shadow: 0 24px 64px rgba(0, 0, 0, 0.5);
+            transform: translateY(20px);
+            transition: transform var(--ease-smooth);
+        }
+
+        .modal-backdrop.open .spec-modal { transform: translateY(0); }
+
+        .modal-close-btn {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 20px;
+            border: 1px solid var(--line-dark);
+            background: rgba(244, 242, 237, 0.05);
+            z-index: 10;
+            cursor: pointer;
+        }
+
+        .modal-close-btn:hover { background: rgba(244, 242, 237, 0.15); }
+
+        .modal-grid {
+            display: grid;
+            grid-template-columns: 0.95fr 1.05fr;
+        }
+
+        .modal-image-col {
+            background: #141412;
+            position: relative;
+        }
+
+        .modal-image-col img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            min-height: 340px;
+        }
+
+        .modal-info-col {
+            padding: 40px 36px;
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+
+        .modal-spec-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 13px;
+            margin-top: 6px;
+        }
+
+        .modal-spec-table tr {
+            border-bottom: 1px solid var(--line-dark);
+        }
+
+        .modal-spec-table th {
+            text-align: left;
+            padding: 10px 0;
+            color: rgba(244, 242, 237, 0.5);
+            font-weight: 500;
+            font-size: 11px;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            width: 38%;
+        }
+
+        .modal-spec-table td {
+            padding: 10px 0;
+            color: var(--white);
+        }
+
+        .modal-action-row {
+            margin-top: 10px;
+            padding-top: 16px;
+            border-top: 1px solid var(--line-dark);
+        }
+
+        /* ==========================================================================
+           15. FLOATING QUICK-CONTACT RAIL
+           ========================================================================== */
+        .floating-contact-rail {
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            z-index: 900;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .contact-rail-btn {
+            width: 44px;
+            height: 44px;
+            background: var(--dark);
+            border: 1px solid var(--line-dark);
+            color: var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+            position: relative;
+            transition: transform var(--ease-fast), background var(--ease-fast);
+        }
+
+        .contact-rail-btn:hover {
+            background: #2D2D2A;
+            transform: translateY(-2px);
+        }
+
+        .contact-rail-btn svg {
+            width: 18px;
+            height: 18px;
+            fill: currentColor;
+        }
+
+        /* ==========================================================================
+           16. FOOTER
+           ========================================================================== */
         footer {
-            padding: 42px 0 32px;
+            padding: 56px 0 36px;
             background: #171715;
             color: var(--white);
+            border-top: 1px solid var(--line-dark);
         }
 
         .footer-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-columns: 1.2fr 1fr 1fr 1fr;
             gap: 36px;
             align-items: start;
         }
 
         .footer-logo {
-            font-size: 17px;
+            font-size: 18px;
             font-weight: 600;
             letter-spacing: 0.26em;
+            display: inline-block;
+        }
+
+        .footer-logo::after {
+            content: '';
+            display: block;
+            width: 24px;
+            height: 1px;
+            background: var(--gold);
+            margin-top: 12px;
         }
 
         .footer-small {
-            margin-top: 8px;
-            color: rgba(247, 245, 239, 0.45);
+            margin-top: 10px;
+            color: rgba(244, 242, 237, 0.45);
             font-size: 11px;
-            letter-spacing: 0.04em;
+            letter-spacing: 0.06em;
         }
 
         .footer-label {
-            margin-bottom: 8px;
-            color: rgba(247, 245, 239, 0.4);
-            font-size: 9px;
+            margin-bottom: 10px;
+            color: rgba(244, 242, 237, 0.45);
+            font-size: 10px;
             letter-spacing: 0.16em;
             text-transform: uppercase;
-            font-weight: 500;
+            font-weight: 600;
+        }
+
+        .footer-links {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .footer-links a {
+            font-size: 12px;
+            color: rgba(244, 242, 237, 0.7);
+        }
+
+        .footer-links a:hover {
+            color: var(--white);
         }
 
         .footer-address {
-            color: rgba(247, 245, 239, 0.65);
+            color: rgba(244, 242, 237, 0.65);
             font-size: 12px;
             line-height: 1.65;
         }
 
-        .footer-contact {
-            text-align: right;
-        }
-
         .footer-email {
             font-size: 13px;
-            color: rgba(247, 245, 239, 0.75);
+            color: rgba(244, 242, 237, 0.85);
+            border-bottom: 1px solid rgba(244, 242, 237, 0.3);
+            padding-bottom: 2px;
+            display: inline-block;
         }
 
         .footer-email:hover {
             color: var(--white);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+            border-bottom-color: var(--white);
         }
 
         .footer-bottom {
             display: flex;
             justify-content: space-between;
             gap: 24px;
-            margin-top: 32px;
-            padding-top: 18px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            color: rgba(247, 245, 239, 0.35);
-            font-size: 10px;
+            margin-top: 48px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(244, 242, 237, 0.1);
+            color: rgba(244, 242, 237, 0.35);
+            font-size: 11px;
             letter-spacing: 0.03em;
         }
 
-        /* RESPONSIVE */
+        /* ==========================================================================
+           17. RESPONSIVE BREAKPOINTS
+           ========================================================================== */
         @media (max-width: 1024px) {
-            .intro-grid, .statement-grid, .about-grid {
+            .intro-grid, .statement-grid, .about-grid, .enquiry-grid {
                 grid-template-columns: 1fr;
-                gap: 36px;
+                gap: 40px;
             }
             .material-break-grid {
                 grid-template-columns: 1fr;
             }
             .material-break-content {
                 padding: 42px 36px;
+                border-left: none;
+                border-top: 1px solid var(--line-dark);
             }
             .audience-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
+            .tech-spec-layout {
+                grid-template-columns: 1fr;
+            }
+            .workflow-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
             .footer-grid {
                 grid-template-columns: 1fr 1fr;
+                gap: 32px;
             }
-            .footer-contact {
-                text-align: left;
+            .modal-grid {
+                grid-template-columns: 1fr;
             }
         }
 
         @media (max-width: 768px) {
-            .container {
-                width: calc(100% - 36px);
-            }
-            section {
-                padding: 56px 0;
-            }
-            .navigation {
-                height: 72px;
-            }
             .nav-links {
-                gap: 16px;
-            }
-            .nav-links a:not(.nav-cta) {
                 display: none;
+            }
+            .menu-toggle {
+                display: flex;
+            }
+            .mobile-drawer {
+                display: flex;
             }
             .hero {
                 min-height: 520px;
@@ -659,7 +1452,7 @@
                 display: block;
                 margin-top: 22px;
             }
-            .hero-action {
+            .hero-actions {
                 margin-top: 18px;
             }
             .section-header {
@@ -678,9 +1471,27 @@
             .material-image {
                 aspect-ratio: 1.5 / 1;
             }
+            .workflow-grid {
+                grid-template-columns: 1fr;
+            }
+            .audience-grid {
+                grid-template-columns: 1fr;
+            }
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+            .form-group.full {
+                grid-column: span 1;
+            }
+            .form-footer {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .btn-submit {
+                width: 100%;
+            }
             .footer-grid {
                 grid-template-columns: 1fr;
-                gap: 28px;
             }
             .footer-bottom {
                 flex-direction: column;
@@ -688,58 +1499,66 @@
             }
         }
 
-        @media (max-width: 480px) {
-            .container {
-                width: calc(100% - 28px);
-            }
-            section {
-                padding: 48px 0;
-            }
-            .logo {
-                font-size: 16px;
-            }
-            .nav-cta {
-                padding: 8px 12px;
-                font-size: 11px;
-            }
-            .hero h1 {
-                font-size: clamp(40px, 11vw, 54px);
-            }
-            .hero-description {
-                font-size: 14px;
-            }
-            .material-overlay {
-                padding: 18px 20px;
-            }
-            .material-name {
-                font-size: 22px;
-            }
-            .audience-grid {
-                grid-template-columns: 1fr;
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                scroll-behavior: auto !important;
             }
         }
     </style>
 </head>
 
 <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
-    <!-- HEADER -->
-    <header>
-        <div class="container navigation">
+    <!-- ==========================================================================
+         HEADER / NAVIGATION
+         ========================================================================== -->
+    <header id="site-header">
+        <div class="container nav-wrapper">
             <a href="#top" class="logo" aria-label="Zordha Industries home">ZORDHA.</a>
-            <nav class="nav-links">
+            
+            <nav class="nav-links" aria-label="Primary Navigation">
                 <a href="#materials">Materials</a>
+                <a href="#sourcing">Sourcing &amp; QC</a>
                 <a href="#b2b">B2B</a>
+                <a href="#specs">Finishes &amp; Specs</a>
                 <a href="#about">About</a>
-                <a href="mailto:info@zordhaindustries.com?subject=Natural%20Stone%20Enquiry" class="nav-cta">Enquire</a>
+                <a href="#enquire" class="nav-cta">Enquire</a>
             </nav>
+
+            <button type="button" class="menu-toggle" id="menu-toggle-btn" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </header>
 
-    <main id="top">
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-drawer" id="mobile-drawer" aria-hidden="true">
+        <ul class="mobile-nav-links">
+            <li><a href="#materials" class="mobile-link">Materials</a></li>
+            <li><a href="#sourcing" class="mobile-link">Sourcing &amp; QC</a></li>
+            <li><a href="#b2b" class="mobile-link">B2B Solutions</a></li>
+            <li><a href="#specs" class="mobile-link">Finishes &amp; Specs</a></li>
+            <li><a href="#about" class="mobile-link">About Zordha</a></li>
+            <li><a href="#enquire" class="mobile-link">Send Enquiry</a></li>
+        </ul>
+        <div>
+            <div class="eyebrow" style="color:rgba(244,242,237,0.5);">Contact</div>
+            <a href="mailto:info@zordhaindustries.com" style="color:var(--white); font-size:14px;">info@zordhaindustries.com</a>
+        </div>
+    </div>
+
+    <!-- ==========================================================================
+         MAIN CONTENT
+         ========================================================================== -->
+    <main id="main-content">
 
         <!-- HERO -->
-        <section class="hero">
+        <section class="hero" id="top">
             <div class="hero-content">
                 <div class="container">
                     <div class="hero-meta">
@@ -751,15 +1570,17 @@
 
                     <div class="hero-bottom">
                         <p class="hero-description">
-                            Natural granite sourced in India for international buyers, fabricators, architects and project requirements.
+                            Indian granite and natural stone sourced for international B2B buyers, fabricators, architects and project requirements.
                         </p>
-                        <a href="#materials" class="hero-action">Explore materials ↓</a>
+                        <div class="hero-actions">
+                            <a href="#materials" class="hero-action-primary">Explore materials &darr;</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- 01 / INTRODUCTION -->
+        <!-- 01 / INTRO -->
         <section>
             <div class="container intro-grid">
                 <div>
@@ -779,7 +1600,7 @@
             </div>
         </section>
 
-        <!-- VISUAL MATERIAL BREAK -->
+        <!-- MATERIAL BREAK -->
         <section class="material-break dark-section">
             <div class="material-break-grid">
                 <div class="material-break-image">
@@ -788,13 +1609,13 @@
                 <div class="material-break-content">
                     <div class="eyebrow">Material Study</div>
                     <h3>Geological character with architectural clarity.</h3>
-                    <p>Every quarry and block yields distinct mineral compositions. We work directly with international fabricators to source stone matching exact project requirements.</p>
+                    <p>Every quarry and block yields distinct mineral compositions. We work directly with international fabricators and buyers to source stone matching exact project requirements.</p>
                 </div>
             </div>
         </section>
 
         <!-- 02 / MATERIAL LIBRARY -->
-        <section id="materials" class="materials">
+        <section id="materials" class="materials-section">
             <div class="container">
                 <div class="section-header">
                     <div>
@@ -807,54 +1628,111 @@
                 </div>
 
                 <div class="material-grid">
-                    <article class="material-card">
+                    
+                    <!-- 01 / Absolute Black -->
+                    <article class="material-card" data-id="absolute-black" tabindex="0" role="button" aria-label="View specifications for Absolute Black Granite">
                         <div class="material-image">
-                            <img src="images/granite-absolute-black.jpg" alt="Absolute Black granite" loading="lazy">
+                            <img src="images/granite-absolute-black.jpg" alt="Absolute Black granite slab" loading="lazy">
                         </div>
                         <div class="material-overlay">
                             <div class="material-index">01 / Granite</div>
                             <div class="material-name">Absolute Black</div>
                             <div class="material-description">Deep black · Fine grain</div>
+                            <span class="material-spec-link">View specifications &rarr;</span>
                         </div>
                     </article>
 
-                    <article class="material-card">
+                    <!-- 02 / Black & Grey -->
+                    <article class="material-card" data-id="black-grey" tabindex="0" role="button" aria-label="View specifications for Charcoal and Black Grey Granite">
                         <div class="material-image">
-                            <img src="images/granite-black-grey.jpg" alt="Black and grey granite" loading="lazy">
+                            <img src="images/granite-black-grey.jpg" alt="Black and grey granite slab" loading="lazy">
                         </div>
                         <div class="material-overlay">
                             <div class="material-index">02 / Granite</div>
-                            <div class="material-name">Black / Grey</div>
+                            <div class="material-name">Charcoal &amp; Grey</div>
                             <div class="material-description">Charcoal · Natural mineral variation</div>
+                            <span class="material-spec-link">View specifications &rarr;</span>
                         </div>
                     </article>
 
-                    <article class="material-card">
+                    <!-- 03 / Classic Grey -->
+                    <article class="material-card" data-id="grey-granite" tabindex="0" role="button" aria-label="View specifications for Classic Grey Granite">
                         <div class="material-image">
-                            <img src="images/granite-grey.jpg" alt="Grey granite" loading="lazy">
+                            <img src="images/granite-grey.jpg" alt="Classic grey granite slab" loading="lazy">
                         </div>
                         <div class="material-overlay">
                             <div class="material-index">03 / Granite</div>
                             <div class="material-name">Grey Granite</div>
                             <div class="material-description">Neutral grey · Fine mineral structure</div>
+                            <span class="material-spec-link">View specifications &rarr;</span>
                         </div>
                     </article>
 
-                    <article class="material-card">
+                    <!-- 04 / Light Granite -->
+                    <article class="material-card" data-id="light-granite" tabindex="0" role="button" aria-label="View specifications for Light Indian Granite">
                         <div class="material-image">
-                            <img src="images/granite-light.jpg" alt="Light granite" loading="lazy">
+                            <img src="images/granite-light.jpg" alt="Light granite slab" loading="lazy">
                         </div>
                         <div class="material-overlay">
                             <div class="material-index">04 / Granite</div>
                             <div class="material-name">Light Granite</div>
                             <div class="material-description">Light grey · Soft natural variation</div>
+                            <span class="material-spec-link">View specifications &rarr;</span>
                         </div>
                     </article>
+
                 </div>
 
                 <p class="material-note">
-                    Natural stone varies by quarry, block and lot. Images shown are representative material studies and do not guarantee a specific available lot.
+                    Natural stone varies by quarry, block and lot. Images shown are representative material studies and do not guarantee a specific available lot. Exact specifications are verified per shipment.
                 </p>
+            </div>
+        </section>
+
+        <!-- SOURCING & QC -->
+        <section id="sourcing" class="dark-section">
+            <div class="container">
+                <div class="section-header">
+                    <div>
+                        <div class="eyebrow">Sourcing &amp; Quality</div>
+                        <h2>Disciplined procurement.</h2>
+                    </div>
+                    <p class="section-intro">
+                        A transparent process connecting buyer specifications with reliable Indian stone processing lines.
+                    </p>
+                </div>
+
+                <div class="workflow-grid">
+                    <div class="workflow-card">
+                        <div class="workflow-step">01 / Specification</div>
+                        <h3>Requirement Review</h3>
+                        <p>Defining colour tone, dimensions, thickness tolerance, edge profiles, and application requirements.</p>
+                    </div>
+
+                    <div class="workflow-card">
+                        <div class="workflow-step">02 / Sourcing</div>
+                        <h3>Supplier Validation</h3>
+                        <p>Connecting with Indian quarry suppliers and processing facilities matching the required technical standards.</p>
+                    </div>
+
+                    <div class="workflow-card">
+                        <div class="workflow-step">03 / Inspection</div>
+                        <h3>Lot Verification</h3>
+                        <p>Visual check of grain uniformity, color continuity, and structural soundness across the specific production lot.</p>
+                    </div>
+
+                    <div class="workflow-card">
+                        <div class="workflow-step">04 / Calibrating</div>
+                        <h3>Finish Check</h3>
+                        <p>Verifying surface polish gloss, honed smoothness, or thermal flame texture, alongside dimensional tolerances.</p>
+                    </div>
+
+                    <div class="workflow-card">
+                        <div class="workflow-step">05 / Logistics</div>
+                        <h3>Export Packaging</h3>
+                        <p>Coordinating seaworthy fumigated wooden crate packaging and container loading for safe international transit.</p>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -871,7 +1749,7 @@
                             Granite is a natural material. Colour, grain, mineral structure, finish and surface characteristics can vary between blocks and lots.
                         </p>
                         <p>
-                            That is why we treat specification as an important part of the sourcing process — not simply as a product name.
+                            That is why we treat specification as an essential part of the sourcing process — not simply as a product name.
                         </p>
                     </div>
                 </div>
@@ -896,7 +1774,7 @@
                         <div class="audience-number">01</div>
                         <div class="audience-body">
                             <h3>Stone Fabricators</h3>
-                            <p>Material for further cutting, fabrication and finished work.</p>
+                            <p>Calibrated slabs ready for cutting, edge profiling, and finished countertop or vanity fabrication.</p>
                         </div>
                     </article>
 
@@ -904,7 +1782,7 @@
                         <div class="audience-number">02</div>
                         <div class="audience-body">
                             <h3>Importers &amp; Distributors</h3>
-                            <p>Indian stone supply for companies serving their own local markets.</p>
+                            <p>Container-load Gangsaw and cutter slab supply for companies serving their regional markets.</p>
                         </div>
                     </article>
 
@@ -912,7 +1790,7 @@
                         <div class="audience-number">03</div>
                         <div class="audience-body">
                             <h3>Architects &amp; Designers</h3>
-                            <p>Material exploration around aesthetic and technical requirements.</p>
+                            <p>Material exploration around aesthetic nuance, surface finishes, and technical suitability.</p>
                         </div>
                     </article>
 
@@ -920,9 +1798,84 @@
                         <div class="audience-number">04</div>
                         <div class="audience-body">
                             <h3>Project Buyers</h3>
-                            <p>Stone requirements defined by project quantity and specification.</p>
+                            <p>Volume stone sourcing for cut-to-size cladding, flooring tiles, and architectural specifications.</p>
                         </div>
                     </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- FINISHES & SPECS -->
+        <section id="specs">
+            <div class="container">
+                <div class="section-header">
+                    <div>
+                        <div class="eyebrow">Technical Reference</div>
+                        <h2>Surface finishes &amp; formats.</h2>
+                    </div>
+                    <p class="section-intro">
+                        Granite surface characteristics can be tailored based on interior or exterior architectural requirements.
+                    </p>
+                </div>
+
+                <div class="tech-spec-layout">
+                    
+                    <div class="tech-spec-box">
+                        <h3>Available Surface Finishes</h3>
+                        <p class="box-sub">Tactile and visual surface treatments available for Indian granite:</p>
+                        
+                        <table class="spec-table">
+                            <tbody>
+                                <tr>
+                                    <th>Polished</th>
+                                    <td>High specular gloss with rich colour depth. Recommended for countertops, vanities, and interior cladding.</td>
+                                </tr>
+                                <tr>
+                                    <th>Honed</th>
+                                    <td>Smooth, non-reflective matte satin surface. Ideal for low-glare flooring, walls, and contemporary spaces.</td>
+                                </tr>
+                                <tr>
+                                    <th>Flamed</th>
+                                    <td>High-temperature textured thermal finish. Provides slip resistance for exterior paving and walkways.</td>
+                                </tr>
+                                <tr>
+                                    <th>Leathered</th>
+                                    <td>Subtle undulating tactile texture with a satin sheen. Resists fingerprints and highlights natural stone veins.</td>
+                                </tr>
+                                <tr>
+                                    <th>Bush-Hammered</th>
+                                    <td>Uniform mechanical pitting for heavy-duty outdoor grip and architectural facades.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="tech-spec-box">
+                        <h3>Formats &amp; Thickness Standards</h3>
+                        <p class="box-sub">Export dimensions and standard thickness specifications:</p>
+                        
+                        <table class="spec-table">
+                            <tbody>
+                                <tr>
+                                    <th>Gangsaw Slabs</th>
+                                    <td>Approx. 2800+ mm length &times; 1600+ mm height. Ideal for large seamless countertops and full-height cladding.</td>
+                                </tr>
+                                <tr>
+                                    <th>Cutter Slabs</th>
+                                    <td>Approx. 1800+ mm length &times; 650+ mm height. Economical format for stairs, sills, and cut pieces.</td>
+                                </tr>
+                                <tr>
+                                    <th>Calibrated Tiles</th>
+                                    <td>Standard dimensions (300&times;300, 600&times;300, 600&times;600 mm) for precision flooring and walling.</td>
+                                </tr>
+                                <tr>
+                                    <th>Standard Thickness</th>
+                                    <td>20 mm (&plusmn;1mm) and 30 mm (&plusmn;1mm) standard export. 40+ mm available for custom architectural projects.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
                 </div>
             </div>
         </section>
@@ -949,14 +1902,187 @@
             </div>
         </section>
 
+        <!-- 05 / COMMERCIAL ENQUIRY -->
+        <section id="enquire" class="enquiry-section">
+            <div class="container enquiry-grid">
+                <div class="enquiry-info">
+                    <div class="eyebrow">05 / Commercial Enquiry</div>
+                    <h2>Discuss a requirement.</h2>
+                    <p>
+                        Submit your specifications, dimensions, finish preferences, and destination port. We will review availability, production timelines, and provide commercial details.
+                    </p>
+
+                    <div class="enquiry-contact-card">
+                        <div class="enquiry-contact-label">Direct Communication</div>
+                        <a href="mailto:info@zordhaindustries.com" class="enquiry-contact-val">info@zordhaindustries.com</a>
+                    </div>
+                </div>
+
+                <div class="enquiry-form-wrap">
+                    <form id="stone-enquiry-form" novalidate>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="contact-name" class="form-label">Your Name <span class="req">*</span></label>
+                                <input type="text" id="contact-name" name="name" class="form-input" placeholder="e.g. Alexander Schmidt" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-company" class="form-label">Company Name <span class="req">*</span></label>
+                                <input type="text" id="contact-company" name="company" class="form-input" placeholder="e.g. Nord Stone GmbH" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="contact-email" class="form-label">Business Email <span class="req">*</span></label>
+                                <input type="email" id="contact-email" name="email" class="form-input" placeholder="name@company.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-country" class="form-label">Country / Destination <span class="req">*</span></label>
+                                <input type="text" id="contact-country" name="country" class="form-input" placeholder="e.g. Germany, UAE, USA" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="business-type" class="form-label">Business Category <span class="req">*</span></label>
+                                <select id="business-type" name="business_type" class="form-select" required>
+                                    <option value="" disabled selected>Select category...</option>
+                                    <option value="Stone Fabricator">Stone Fabricator</option>
+                                    <option value="Importer / Distributor">Importer / Distributor</option>
+                                    <option value="Architect / Designer">Architect / Designer</option>
+                                    <option value="Project Buyer / Contractor">Project Buyer / Contractor</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="material-select" class="form-label">Material of Interest</label>
+                                <select id="material-select" name="material" class="form-select">
+                                    <option value="General Enquiry">General Stone Sourcing</option>
+                                    <option value="Absolute Black Granite">Absolute Black Granite</option>
+                                    <option value="Charcoal & Black-Grey Granite">Charcoal &amp; Grey Granite</option>
+                                    <option value="Classic Grey Granite">Classic Grey Granite</option>
+                                    <option value="Light Indian Granite">Light Granite</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="finish-select" class="form-label">Preferred Finish</label>
+                                <select id="finish-select" name="finish" class="form-select">
+                                    <option value="Polished">Polished</option>
+                                    <option value="Honed">Honed</option>
+                                    <option value="Flamed">Flamed</option>
+                                    <option value="Leathered">Leathered</option>
+                                    <option value="Multiple / To discuss">Multiple / To discuss</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="quantity-est" class="form-label">Estimated Quantity</label>
+                                <input type="text" id="quantity-est" name="quantity" class="form-input" placeholder="e.g. 1 Container / 500 m²">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group full">
+                                <label for="enquiry-notes" class="form-label">Requirement Details &amp; Specifications</label>
+                                <textarea id="enquiry-notes" name="notes" class="form-textarea" placeholder="Please specify thickness, dimensions, destination port, and project schedule..."></textarea>
+                            </div>
+                        </div>
+
+                        <div class="form-footer">
+                            <p class="form-note">Requirement details are handled confidentially for commercial stone quotation.</p>
+                            <button type="submit" class="btn-submit">Send Enquiry</button>
+                        </div>
+                    </form>
+
+                    <div class="form-success-box" id="form-success-box">
+                        <h3>Enquiry Received</h3>
+                        <p>Thank you for contacting Zordha Industries. We will review your specification and get back to you shortly.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </main>
 
-    <!-- FOOTER -->
+    <!-- ==========================================================================
+         MATERIAL SPECIFICATION MODAL
+         ========================================================================== -->
+    <div class="modal-backdrop" id="material-modal" role="dialog" aria-modal="true" aria-hidden="true">
+        <div class="spec-modal">
+            <button type="button" class="modal-close-btn" id="modal-close-btn" aria-label="Close specification modal">&times;</button>
+            <div class="modal-grid">
+                <div class="modal-image-col">
+                    <img src="images/granite-absolute-black.jpg" alt="Granite sample" id="modal-img">
+                </div>
+                <div class="modal-info-col">
+                    <div>
+                        <div class="eyebrow" id="modal-stone-cat">Natural Granite · India</div>
+                        <h3 class="material-name" id="modal-stone-name" style="font-size:28px;">Absolute Black</h3>
+                    </div>
+
+                    <p id="modal-stone-desc" style="font-size:14px; color:rgba(244,242,237,0.75); line-height:1.6;"></p>
+
+                    <table class="modal-spec-table">
+                        <tbody>
+                            <tr>
+                                <th>Stone Type</th>
+                                <td id="modal-stone-type">Natural Granite</td>
+                            </tr>
+                            <tr>
+                                <th>Origin</th>
+                                <td>India</td>
+                            </tr>
+                            <tr>
+                                <th>Finishes</th>
+                                <td id="modal-stone-finishes">Polished, Honed, Flamed, Leathered</td>
+                            </tr>
+                            <tr>
+                                <th>Standard Formats</th>
+                                <td id="modal-stone-formats">Gangsaw Slabs, Cutter Slabs, Cut-to-size</td>
+                            </tr>
+                            <tr>
+                                <th>Thickness</th>
+                                <td>20 mm, 30 mm, Custom</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="modal-action-row">
+                        <button type="button" class="btn-submit" id="modal-request-btn" style="width:100%; text-align:center;">Request this material in enquiry &rarr;</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating Contact Rail -->
+    <div class="floating-contact-rail" id="floating-contact-rail">
+        <a href="mailto:info@zordhaindustries.com?subject=Natural%20Stone%20Enquiry" class="contact-rail-btn" aria-label="Email Zordha Industries">
+            <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        </a>
+    </div>
+
+    <!-- ==========================================================================
+         FOOTER
+         ========================================================================== -->
     <footer>
         <div class="container footer-grid">
             <div>
                 <div class="footer-logo">ZORDHA.</div>
                 <div class="footer-small">Natural Stone · India</div>
+            </div>
+
+            <div>
+                <div class="footer-label">Navigation</div>
+                <ul class="footer-links">
+                    <li><a href="#materials">Materials</a></li>
+                    <li><a href="#sourcing">Sourcing &amp; QC</a></li>
+                    <li><a href="#b2b">B2B</a></li>
+                    <li><a href="#specs">Finishes &amp; Specs</a></li>
+                    <li><a href="#about">About</a></li>
+                </ul>
             </div>
 
             <div>
@@ -969,19 +2095,199 @@
                 </div>
             </div>
 
-            <div class="footer-contact">
+            <div>
                 <div class="footer-label">Contact</div>
-                <a href="mailto:info@zordhaindustries.com" class="footer-email">
-                    info@zordhaindustries.com
-                </a>
+                <a href="mailto:info@zordhaindustries.com" class="footer-email">info@zordhaindustries.com</a>
             </div>
         </div>
 
         <div class="container footer-bottom">
-            <div>© 2026 Zordha Industries</div>
+            <div>&copy; 2026 Zordha Industries</div>
             <div>Natural Stone Sourcing · India</div>
         </div>
     </footer>
 
+    <!-- ==========================================================================
+         JAVASCRIPT
+         ========================================================================== -->
+    <script>
+        (function() {
+            'use strict';
+
+            const materialsData = {
+                "absolute-black": {
+                    name: "Absolute Black",
+                    category: "01 / Granite",
+                    image: "images/granite-absolute-black.jpg",
+                    desc: "Deep, uniform black natural granite with fine crystalline density. Highly suited for premium countertops, cladding and precision cut-to-size works.",
+                    finishes: "Polished, Honed, Flamed, Leathered",
+                    formats: "Gangsaw Slabs, Cutter Slabs, Cut-to-size"
+                },
+                "black-grey": {
+                    name: "Charcoal & Grey",
+                    category: "02 / Granite",
+                    image: "images/granite-black-grey.jpg",
+                    desc: "Dark graphite and charcoal stone with subtle natural mineral movement for contemporary interior and exterior architectural applications.",
+                    finishes: "Polished, Honed, Leathered",
+                    formats: "Gangsaw Slabs, Cutter Slabs, Project Panels"
+                },
+                "grey-granite": {
+                    name: "Grey Granite",
+                    category: "03 / Granite",
+                    image: "images/granite-grey.jpg",
+                    desc: "Neutral grey granite with uniform crystalline structure. Exceptional durability and abrasion resistance for high-traffic paving and facades.",
+                    finishes: "Polished, Flamed, Bush-Hammered",
+                    formats: "Gangsaw Slabs, Calibrated Tiles, Pavers"
+                },
+                "light-granite": {
+                    name: "Light Granite",
+                    category: "04 / Granite",
+                    image: "images/granite-light.jpg",
+                    desc: "Luminous light grey natural stone with subtle mineral flow, providing warmth and texture for modern architectural spaces.",
+                    finishes: "Polished, Honed, Flamed",
+                    formats: "Gangsaw Slabs, Cutter Slabs, Modular Tiles"
+                }
+            };
+
+            // Sticky Header Scroll
+            const header = document.getElementById('site-header');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 30) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            }, { passive: true });
+
+            // Mobile Drawer
+            const menuToggleBtn = document.getElementById('menu-toggle-btn');
+            const mobileDrawer = document.getElementById('mobile-drawer');
+            const mobileLinks = document.querySelectorAll('.mobile-link');
+
+            function toggleDrawer(open) {
+                const isOpen = typeof open === 'boolean' ? open : !mobileDrawer.classList.contains('open');
+                mobileDrawer.classList.toggle('open', isOpen);
+                menuToggleBtn.classList.toggle('active', isOpen);
+                document.body.classList.toggle('no-scroll', isOpen);
+            }
+
+            if (menuToggleBtn && mobileDrawer) {
+                menuToggleBtn.addEventListener('click', () => toggleDrawer());
+                mobileLinks.forEach(l => l.addEventListener('click', () => toggleDrawer(false)));
+            }
+
+            // Material Modal
+            const modal = document.getElementById('material-modal');
+            const modalCloseBtn = document.getElementById('modal-close-btn');
+            const modalImg = document.getElementById('modal-img');
+            const modalStoneName = document.getElementById('modal-stone-name');
+            const modalStoneDesc = document.getElementById('modal-stone-desc');
+            const modalStoneCat = document.getElementById('modal-stone-cat');
+            const modalStoneFinishes = document.getElementById('modal-stone-finishes');
+            const modalStoneFormats = document.getElementById('modal-stone-formats');
+            const modalRequestBtn = document.getElementById('modal-request-btn');
+            const materialSelect = document.getElementById('material-select');
+
+            let currentMaterialName = "";
+
+            function openModal(id) {
+                const data = materialsData[id];
+                if (!data) return;
+                currentMaterialName = data.name;
+                modalImg.src = data.image;
+                modalImg.alt = data.name;
+                modalStoneName.textContent = data.name;
+                modalStoneDesc.textContent = data.desc;
+                modalStoneCat.textContent = data.category;
+                modalStoneFinishes.textContent = data.finishes;
+                modalStoneFormats.textContent = data.formats;
+
+                modal.classList.add('open');
+                modal.setAttribute('aria-hidden', 'false');
+                document.body.classList.add('no-scroll');
+            }
+
+            function closeModal() {
+                modal.classList.remove('open');
+                modal.setAttribute('aria-hidden', 'true');
+                document.body.classList.remove('no-scroll');
+            }
+
+            document.querySelectorAll('.material-card').forEach(card => {
+                const id = card.getAttribute('data-id');
+                card.addEventListener('click', () => openModal(id));
+                card.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        openModal(id);
+                    }
+                });
+            });
+
+            if (modalCloseBtn) modalCloseBtn.addEventListener('click', closeModal);
+            if (modal) {
+                modal.addEventListener('click', (e) => {
+                    if (e.target === modal) closeModal();
+                });
+            }
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && modal.classList.contains('open')) closeModal();
+            });
+
+            if (modalRequestBtn) {
+                modalRequestBtn.addEventListener('click', () => {
+                    closeModal();
+                    if (materialSelect) {
+                        for (let i = 0; i < materialSelect.options.length; i++) {
+                            if (materialSelect.options[i].text.includes(currentMaterialName)) {
+                                materialSelect.selectedIndex = i;
+                                break;
+                            }
+                        }
+                    }
+                    const enquire = document.getElementById('enquire');
+                    if (enquire) enquire.scrollIntoView({ behavior: 'smooth' });
+                });
+            }
+
+            // Enquiry Form
+            const form = document.getElementById('stone-enquiry-form');
+            const successBox = document.getElementById('form-success-box');
+            if (form) {
+                form.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    const name = document.getElementById('contact-name');
+                    const company = document.getElementById('contact-company');
+                    const email = document.getElementById('contact-email');
+                    const country = document.getElementById('contact-country');
+                    const category = document.getElementById('business-type');
+
+                    let valid = true;
+                    [name, company, email, country, category].forEach(f => {
+                        if (!f.value.trim()) {
+                            f.style.borderColor = '#E2A080';
+                            valid = false;
+                        } else {
+                            f.style.borderColor = 'rgba(244, 242, 237, 0.18)';
+                        }
+                    });
+
+                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    if (email.value && !emailRegex.test(email.value.trim())) {
+                        email.style.borderColor = '#E2A080';
+                        valid = false;
+                    }
+
+                    if (valid) {
+                        form.style.display = 'none';
+                        if (successBox) {
+                            successBox.style.display = 'block';
+                            successBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                        }
+                    }
+                });
+            }
+        })();
+    </script>
 </body>
 </html>
