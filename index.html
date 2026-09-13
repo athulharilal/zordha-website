@@ -45,15 +45,12 @@
           "url": "https://zordhaindustries.com",
           "logo": "https://zordhaindustries.com/favicon.svg",
           "email": "info@zordhaindustries.com",
-          "description": "India-based natural stone and granite sourcing business connecting international B2B requirements with reliable Indian stone supply.",
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "B28, Anjanasree Arcade, Annankunnu Road, Nagampadam",
-            "addressLocality": "Kottayam",
-            "addressRegion": "Kerala",
-            "postalCode": "686001",
-            "addressCountry": "IN"
-          }
+          "telephone": "+919180575785",
+          "sameAs": [
+            "https://www.instagram.com/zordhaindustries",
+            "https://www.facebook.com/zordhaindustries"
+          ],
+          "description": "India-based natural stone and granite sourcing business connecting international B2B requirements with reliable Indian stone supply."
         },
         {
           "@type": "WebSite",
@@ -370,6 +367,35 @@
             border-color: var(--white);
         }
 
+        .nav-whatsapp {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            border: 1px solid rgba(200, 169, 110, 0.45);
+            padding: 8px 16px;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            background: rgba(200, 169, 110, 0.08);
+            color: var(--white);
+            transition: background var(--ease-fast), border-color var(--ease-fast), color var(--ease-fast), transform var(--ease-fast);
+        }
+
+        .nav-whatsapp:hover {
+            background: rgba(200, 169, 110, 0.2);
+            border-color: var(--gold);
+            color: #FFF;
+            transform: translateY(-1px);
+        }
+
+        .nav-whatsapp svg {
+            width: 14px;
+            height: 14px;
+            fill: var(--gold);
+            flex-shrink: 0;
+        }
+
         /* Mobile Hamburger */
         .menu-toggle {
             display: none;
@@ -404,11 +430,12 @@
             height: 100vh;
             background: var(--dark);
             z-index: 1050;
-            padding: 110px var(--space-32) var(--space-48);
+            padding: 100px var(--space-32) var(--space-40);
             flex-direction: column;
             justify-content: space-between;
             transform: translateX(100%);
             transition: transform var(--ease-smooth);
+            overflow-y: auto;
         }
 
         .mobile-drawer.open { transform: translateX(0); }
@@ -417,16 +444,77 @@
             list-style: none;
             display: flex;
             flex-direction: column;
-            gap: var(--space-24);
+            gap: var(--space-20);
         }
 
         .mobile-nav-links a {
             font-family: var(--font-serif);
-            font-size: 28px;
+            font-size: 26px;
             color: var(--white);
             display: block;
             border-bottom: 1px solid var(--line-dark);
-            padding-bottom: var(--space-12);
+            padding-bottom: var(--space-8);
+        }
+
+        .mobile-contact-group {
+            margin-top: var(--space-24);
+            padding-top: var(--space-20);
+            border-top: 1px solid var(--line-dark);
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .mobile-contact-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            color: rgba(244, 242, 237, 0.9);
+            font-size: 14px;
+            transition: color var(--ease-fast);
+        }
+
+        .mobile-contact-link svg {
+            width: 16px;
+            height: 16px;
+            fill: var(--gold);
+            flex-shrink: 0;
+        }
+
+        .mobile-contact-link:hover {
+            color: var(--gold);
+        }
+
+        .mobile-social-pills {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 6px;
+        }
+
+        .social-icon-btn {
+            width: 38px;
+            height: 38px;
+            border: 1px solid var(--line-dark);
+            background: rgba(244, 242, 237, 0.05);
+            color: rgba(244, 242, 237, 0.85);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: all var(--ease-fast);
+        }
+
+        .social-icon-btn svg {
+            width: 16px;
+            height: 16px;
+            fill: currentColor;
+        }
+
+        .social-icon-btn:hover {
+            background: rgba(200, 169, 110, 0.2);
+            border-color: var(--gold);
+            color: var(--white);
+            transform: translateY(-2px);
         }
 
         /* ==========================================================================
@@ -524,6 +612,37 @@
         .hero-action-primary:hover {
             border-bottom-color: var(--gold);
             transform: translateY(-2px);
+        }
+
+        .hero-action-secondary {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            padding: 10px 18px;
+            border: 1px solid rgba(200, 169, 110, 0.45);
+            background: rgba(28, 28, 26, 0.6);
+            color: var(--white);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            transition: background var(--ease-fast), border-color var(--ease-fast), transform var(--ease-fast), color var(--ease-fast);
+        }
+
+        .hero-action-secondary:hover {
+            background: rgba(200, 169, 110, 0.2);
+            border-color: var(--gold);
+            color: var(--white);
+            transform: translateY(-2px);
+        }
+
+        .hero-action-secondary svg {
+            width: 14px;
+            height: 14px;
+            fill: var(--gold);
+            flex-shrink: 0;
         }
 
         /* ==========================================================================
@@ -1012,25 +1131,62 @@
             max-width: 440px;
         }
 
-        .enquiry-contact-card {
+        .enquiry-contact-grid {
             margin-top: 36px;
-            padding: 24px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+        }
+
+        .enquiry-channel-card {
+            padding: 16px 18px;
             background: rgba(244, 242, 237, 0.04);
             border: 1px solid var(--line-dark);
             border-left: 2px solid var(--gold);
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            text-decoration: none;
+            transition: background var(--ease-fast), border-color var(--ease-fast), transform var(--ease-fast);
         }
 
-        .enquiry-contact-label {
+        .enquiry-channel-card:hover {
+            background: rgba(244, 242, 237, 0.08);
+            border-color: rgba(200, 169, 110, 0.4);
+            border-left-color: var(--gold);
+            transform: translateY(-2px);
+        }
+
+        .enquiry-channel-header {
+            display: flex;
+            align-items: center;
+            gap: 8px;
             font-size: 10px;
             letter-spacing: 0.16em;
             text-transform: uppercase;
-            color: rgba(244, 242, 237, 0.45);
-            margin-bottom: 6px;
+            color: rgba(244, 242, 237, 0.55);
+            font-weight: 600;
         }
 
-        .enquiry-contact-val {
-            font-size: 14px;
+        .enquiry-channel-header svg {
+            width: 14px;
+            height: 14px;
+            fill: var(--gold);
+            flex-shrink: 0;
+        }
+
+        .enquiry-channel-val {
+            font-size: 13px;
+            font-weight: 500;
             color: var(--white);
+            word-break: break-all;
+        }
+
+        .enquiry-channel-sub {
+            font-size: 11px;
+            color: rgba(200, 169, 110, 0.85);
+            margin-top: 2px;
+            font-weight: 500;
         }
 
         .enquiry-form-wrap {
@@ -1098,19 +1254,27 @@
             justify-content: space-between;
             align-items: center;
             gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .form-actions-group {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-shrink: 0;
         }
 
         .form-note {
             font-size: 11px;
             color: rgba(244, 242, 237, 0.45);
             line-height: 1.5;
-            max-width: 340px;
+            max-width: 320px;
         }
 
         .btn-submit {
             background: var(--white);
             color: var(--dark);
-            padding: 14px 36px;
+            padding: 14px 32px;
             font-size: 12px;
             font-weight: 600;
             letter-spacing: 0.14em;
@@ -1124,6 +1288,37 @@
             background: var(--gold);
             color: var(--dark);
             border-color: var(--gold);
+        }
+
+        .btn-whatsapp-outline {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background: rgba(200, 169, 110, 0.08);
+            color: var(--white);
+            border: 1px solid rgba(200, 169, 110, 0.55);
+            padding: 13px 22px;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            transition: background var(--ease-fast), border-color var(--ease-fast), color var(--ease-fast), transform var(--ease-fast);
+            flex-shrink: 0;
+        }
+
+        .btn-whatsapp-outline:hover {
+            background: rgba(200, 169, 110, 0.2);
+            border-color: var(--gold);
+            color: #FFF;
+            transform: translateY(-1px);
+        }
+
+        .btn-whatsapp-outline svg {
+            width: 15px;
+            height: 15px;
+            fill: var(--gold);
+            flex-shrink: 0;
         }
 
         .form-success-box {
@@ -1255,9 +1450,12 @@
         }
 
         .modal-action-row {
-            margin-top: 10px;
-            padding-top: 16px;
+            margin-top: 14px;
+            padding-top: 18px;
             border-top: 1px solid var(--line-dark);
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
         }
 
         /* ==========================================================================
@@ -1270,31 +1468,44 @@
             z-index: 900;
             display: flex;
             flex-direction: column;
-            gap: 8px;
+            gap: 10px;
         }
 
         .contact-rail-btn {
-            width: 44px;
-            height: 44px;
+            width: 46px;
+            height: 46px;
             background: var(--dark);
             border: 1px solid var(--line-dark);
             color: var(--white);
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
             position: relative;
-            transition: transform var(--ease-fast), background var(--ease-fast);
+            transition: transform var(--ease-fast), background var(--ease-fast), border-color var(--ease-fast);
         }
 
         .contact-rail-btn:hover {
             background: #2D2D2A;
+            border-color: var(--gold);
             transform: translateY(-2px);
         }
 
+        .contact-rail-btn.whatsapp-btn {
+            background: #19231D;
+            border-color: rgba(200, 169, 110, 0.4);
+            color: var(--gold);
+        }
+
+        .contact-rail-btn.whatsapp-btn:hover {
+            background: #223028;
+            border-color: var(--gold);
+            color: #FFF;
+        }
+
         .contact-rail-btn svg {
-            width: 18px;
-            height: 18px;
+            width: 20px;
+            height: 20px;
             fill: currentColor;
         }
 
@@ -1302,7 +1513,7 @@
            16. FOOTER
            ========================================================================== */
         footer {
-            padding: 56px 0 36px;
+            padding: 64px 0 40px;
             background: #171715;
             color: var(--white);
             border-top: 1px solid var(--line-dark);
@@ -1310,8 +1521,8 @@
 
         .footer-grid {
             display: grid;
-            grid-template-columns: 1.2fr 1fr 1fr 1fr;
-            gap: 36px;
+            grid-template-columns: 1.2fr 0.9fr 1.1fr 1.1fr;
+            gap: 40px;
             align-items: start;
         }
 
@@ -1336,10 +1547,11 @@
             color: rgba(244, 242, 237, 0.45);
             font-size: 11px;
             letter-spacing: 0.06em;
+            line-height: 1.6;
         }
 
         .footer-label {
-            margin-bottom: 10px;
+            margin-bottom: 14px;
             color: rgba(244, 242, 237, 0.45);
             font-size: 10px;
             letter-spacing: 0.16em;
@@ -1351,35 +1563,75 @@
             list-style: none;
             display: flex;
             flex-direction: column;
-            gap: 8px;
+            gap: 10px;
         }
 
         .footer-links a {
-            font-size: 12px;
+            font-size: 13px;
             color: rgba(244, 242, 237, 0.7);
+            transition: color var(--ease-fast);
         }
 
         .footer-links a:hover {
-            color: var(--white);
+            color: var(--gold);
         }
 
-        .footer-address {
-            color: rgba(244, 242, 237, 0.65);
-            font-size: 12px;
-            line-height: 1.65;
+        .footer-contact-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
         }
 
-        .footer-email {
+        .footer-contact-item {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .footer-contact-type {
+            font-size: 10px;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: rgba(244, 242, 237, 0.4);
+        }
+
+        .footer-contact-val {
             font-size: 13px;
-            color: rgba(244, 242, 237, 0.85);
-            border-bottom: 1px solid rgba(244, 242, 237, 0.3);
-            padding-bottom: 2px;
-            display: inline-block;
+            color: rgba(244, 242, 237, 0.9);
+            transition: color var(--ease-fast);
         }
 
-        .footer-email:hover {
+        .footer-contact-val:hover {
+            color: var(--gold);
+        }
+
+        .footer-social-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .footer-social-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 13px;
+            color: rgba(244, 242, 237, 0.75);
+            transition: color var(--ease-fast), transform var(--ease-fast);
+        }
+
+        .footer-social-link svg {
+            width: 15px;
+            height: 15px;
+            fill: var(--gold);
+            flex-shrink: 0;
+        }
+
+        .footer-social-link:hover {
             color: var(--white);
-            border-bottom-color: var(--white);
+            transform: translateX(3px);
         }
 
         .footer-bottom {
@@ -1387,7 +1639,7 @@
             justify-content: space-between;
             gap: 24px;
             margin-top: 48px;
-            padding-top: 20px;
+            padding-top: 24px;
             border-top: 1px solid rgba(244, 242, 237, 0.1);
             color: rgba(244, 242, 237, 0.35);
             font-size: 11px;
@@ -1421,7 +1673,7 @@
             }
             .footer-grid {
                 grid-template-columns: 1fr 1fr;
-                gap: 32px;
+                gap: 36px;
             }
             .modal-grid {
                 grid-template-columns: 1fr;
@@ -1454,6 +1706,8 @@
             }
             .hero-actions {
                 margin-top: 18px;
+                flex-wrap: wrap;
+                gap: 14px;
             }
             .section-header {
                 display: block;
@@ -1477,6 +1731,9 @@
             .audience-grid {
                 grid-template-columns: 1fr;
             }
+            .enquiry-contact-grid {
+                grid-template-columns: 1fr;
+            }
             .form-row {
                 grid-template-columns: 1fr;
             }
@@ -1487,8 +1744,14 @@
                 flex-direction: column;
                 align-items: stretch;
             }
-            .btn-submit {
+            .form-actions-group {
+                flex-direction: column;
+                align-items: stretch;
                 width: 100%;
+            }
+            .btn-submit, .btn-whatsapp-outline {
+                width: 100%;
+                text-align: center;
             }
             .footer-grid {
                 grid-template-columns: 1fr;
@@ -1497,19 +1760,263 @@
                 flex-direction: column;
                 gap: 6px;
             }
+            .floating-contact-rail {
+                bottom: 20px;
+                right: 20px;
+            }
+        }
+
+        /* ==========================================================================
+           INITIAL PAGE LOADER
+           ========================================================================== */
+        body.loading-active {
+            overflow: hidden !important;
+        }
+
+        .page-loader {
+            position: fixed;
+            inset: 0;
+            z-index: 999999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #1C1C1A;
+            color: #F4F2ED;
+            opacity: 1;
+            visibility: visible;
+            transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: none;
+            pointer-events: auto;
+        }
+
+        .page-loader.loader-fade-out {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+        }
+
+        .loader-backdrop {
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 50% 48%, #252522 0%, #1C1C1A 85%);
+            pointer-events: none;
+        }
+
+        .loader-content {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 32px 24px;
+            max-width: 90vw;
+            animation: loaderContentFadeIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        @keyframes loaderContentFadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(8px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .loader-brand-mark {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 28px;
+        }
+
+        .loader-emblem {
+            position: relative;
+            width: 58px;
+            height: 58px;
+            border: 1px solid rgba(200, 169, 110, 0.35);
+            background: linear-gradient(145deg, rgba(36, 36, 33, 0.9) 0%, rgba(24, 24, 22, 0.95) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.45), inset 0 0 16px rgba(200, 169, 110, 0.06);
+            animation: emblemPulse 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes emblemPulse {
+            0% {
+                border-color: rgba(200, 169, 110, 0.3);
+                box-shadow: 0 8px 32px rgba(0, 0, 0, 0.45), inset 0 0 12px rgba(200, 169, 110, 0.04);
+            }
+            100% {
+                border-color: rgba(200, 169, 110, 0.65);
+                box-shadow: 0 10px 36px rgba(0, 0, 0, 0.55), 0 0 20px rgba(200, 169, 110, 0.15), inset 0 0 20px rgba(200, 169, 110, 0.1);
+            }
+        }
+
+        .loader-emblem-letter {
+            font-family: var(--font-serif, "Playfair Display", Georgia, serif);
+            font-size: 32px;
+            font-weight: 500;
+            color: #F4F2ED;
+            line-height: 1;
+            letter-spacing: -0.02em;
+            transform: translateY(1px);
+        }
+
+        .loader-emblem-corner {
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            border-color: #C8A96E;
+            border-style: solid;
+        }
+
+        .loader-emblem-corner.tl { top: -1px; left: -1px; border-width: 1.5px 0 0 1.5px; }
+        .loader-emblem-corner.tr { top: -1px; right: -1px; border-width: 1.5px 1.5px 0 0; }
+        .loader-emblem-corner.bl { bottom: -1px; left: -1px; border-width: 0 0 1.5px 1.5px; }
+        .loader-emblem-corner.br { bottom: -1px; right: -1px; border-width: 0 1.5px 1.5px 0; }
+
+        .loader-brand-text {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .loader-brand-title {
+            font-family: var(--font-sans, "DM Sans", sans-serif);
+            font-size: 18px;
+            font-weight: 600;
+            letter-spacing: 0.28em;
+            color: #F4F2ED;
+            text-transform: uppercase;
+            padding-left: 0.28em; /* optical centering */
+        }
+
+        .loader-brand-sub {
+            font-family: var(--font-sans, "DM Sans", sans-serif);
+            font-size: 10px;
+            font-weight: 500;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            color: var(--gold-muted, rgba(200, 169, 110, 0.75));
+            padding-left: 0.22em; /* optical centering */
+        }
+
+        .loader-status {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .loader-message {
+            font-family: var(--font-sans, "DM Sans", sans-serif);
+            font-size: 13px;
+            font-weight: 400;
+            letter-spacing: 0.06em;
+            color: rgba(244, 242, 237, 0.65);
+            margin: 0;
+            animation: textSubtlePulse 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes textSubtlePulse {
+            0% { opacity: 0.55; }
+            100% { opacity: 0.95; }
+        }
+
+        .loader-progress-track {
+            width: 180px;
+            height: 2px;
+            background: rgba(244, 242, 237, 0.12);
+            border-radius: 2px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .loader-progress-bar {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background: linear-gradient(90deg, transparent 0%, #C8A96E 35%, #F4F2ED 50%, #C8A96E 65%, transparent 100%);
+            border-radius: 2px;
+            transform: translateX(-100%);
+            animation: progressShimmer 1.8s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+        }
+
+        @keyframes progressShimmer {
+            0% {
+                transform: translateX(-100%);
+            }
+            60% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(100%);
+            }
         }
 
         @media (prefers-reduced-motion: reduce) {
-            *, *::before, *::after {
-                animation-duration: 0.01ms !important;
-                animation-iteration-count: 1 !important;
-                scroll-behavior: auto !important;
+            .page-loader {
+                transition: opacity 0.2s ease !important;
+            }
+            .loader-content {
+                animation: none !important;
+            }
+            .loader-emblem {
+                animation: none !important;
+            }
+            .loader-message {
+                animation: none !important;
+                opacity: 0.8 !important;
+            }
+            .loader-progress-bar {
+                animation: none !important;
+                transform: translateX(0) !important;
+                background: #C8A96E !important;
+                width: 100% !important;
             }
         }
     </style>
 </head>
 
-<body>
+<body class="loading-active">
+    <!-- ==========================================================================
+         INITIAL PRELOADER
+         ========================================================================== -->
+    <div id="page-loader" class="page-loader" role="status" aria-live="polite" aria-label="Loading Zordha Industries">
+        <div class="loader-backdrop"></div>
+        <div class="loader-content">
+            <div class="loader-brand-mark">
+                <div class="loader-emblem" aria-hidden="true">
+                    <span class="loader-emblem-letter">Z</span>
+                    <span class="loader-emblem-corner tl"></span>
+                    <span class="loader-emblem-corner tr"></span>
+                    <span class="loader-emblem-corner bl"></span>
+                    <span class="loader-emblem-corner br"></span>
+                </div>
+                <div class="loader-brand-text">
+                    <span class="loader-brand-title">ZORDHA.</span>
+                    <span class="loader-brand-sub">Natural Stone · India</span>
+                </div>
+            </div>
+            <div class="loader-status">
+                <p class="loader-message">Loading Zordha Industries...</p>
+                <div class="loader-progress-track" aria-hidden="true">
+                    <div class="loader-progress-bar"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
     <!-- ==========================================================================
@@ -1525,6 +2032,10 @@
                 <a href="#b2b">B2B</a>
                 <a href="#specs">Finishes &amp; Specs</a>
                 <a href="#about">About</a>
+                <a href="https://wa.me/919180575785?text=Hello%20Zordha%20Industries%2C%20I%E2%80%99m%20interested%20in%20your%20natural%20stone%20products.%20I%E2%80%99d%20like%20to%20discuss%20my%20requirement." target="_blank" rel="noopener noreferrer" class="nav-whatsapp" aria-label="Chat on WhatsApp">
+                    <svg viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.196 8.196 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24m4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.03-1.25-.75-.67-1.26-1.5-1.41-1.75-.15-.25-.02-.39.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.78 2.72 4.31 3.81.6.26 1.07.42 1.44.54.61.19 1.16.17 1.6.1.49-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.07-.1-.23-.17-.48-.29"/></svg>
+                    <span>WhatsApp</span>
+                </a>
                 <a href="#enquire" class="nav-cta">Enquire</a>
             </nav>
 
@@ -1546,9 +2057,24 @@
             <li><a href="#about" class="mobile-link">About Zordha</a></li>
             <li><a href="#enquire" class="mobile-link">Send Enquiry</a></li>
         </ul>
-        <div>
-            <div class="eyebrow" style="color:rgba(244,242,237,0.5);">Contact</div>
-            <a href="mailto:info@zordhaindustries.com" style="color:var(--white); font-size:14px;">info@zordhaindustries.com</a>
+        <div class="mobile-contact-group">
+            <div class="eyebrow" style="color:rgba(244,242,237,0.5);">Direct Channels</div>
+            <a href="https://wa.me/919180575785?text=Hello%20Zordha%20Industries%2C%20I%E2%80%99m%20interested%20in%20your%20natural%20stone%20products.%20I%E2%80%99d%20like%20to%20discuss%20my%20requirement." target="_blank" rel="noopener noreferrer" class="mobile-contact-link">
+                <svg viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.196 8.196 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24m4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.03-1.25-.75-.67-1.26-1.5-1.41-1.75-.15-.25-.02-.39.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.78 2.72 4.31 3.81.6.26 1.07.42 1.44.54.61.19 1.16.17 1.6.1.49-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.07-.1-.23-.17-.48-.29"/></svg>
+                <span>+91 9180575785 (WhatsApp)</span>
+            </a>
+            <a href="mailto:info@zordhaindustries.com" class="mobile-contact-link">
+                <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                <span>info@zordhaindustries.com</span>
+            </a>
+            <div class="mobile-social-pills">
+                <a href="https://www.instagram.com/zordhaindustries" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Zordha Industries Instagram">
+                    <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                </a>
+                <a href="https://www.facebook.com/zordhaindustries" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Zordha Industries Facebook">
+                    <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                </a>
+            </div>
         </div>
     </div>
 
@@ -1574,6 +2100,10 @@
                         </p>
                         <div class="hero-actions">
                             <a href="#materials" class="hero-action-primary">Explore materials &darr;</a>
+                            <a href="https://wa.me/919180575785?text=Hello%20Zordha%20Industries%2C%20I%E2%80%99m%20interested%20in%20your%20natural%20stone%20products.%20I%E2%80%99d%20like%20to%20discuss%20my%20requirement." target="_blank" rel="noopener noreferrer" class="hero-action-secondary" aria-label="Direct WhatsApp enquiry">
+                                <svg viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.196 8.196 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24m4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.03-1.25-.75-.67-1.26-1.5-1.41-1.75-.15-.25-.02-.39.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.78 2.72 4.31 3.81.6.26 1.07.42 1.44.54.61.19 1.16.17 1.6.1.49-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.07-.1-.23-.17-.48-.29"/></svg>
+                                <span>WhatsApp Sourcing</span>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -1689,232 +2219,52 @@
             </div>
         </section>
 
-        <!-- SOURCING & QC -->
-        <section id="sourcing" class="dark-section">
-            <div class="container">
-                <div class="section-header">
-                    <div>
-                        <div class="eyebrow">Sourcing &amp; Quality</div>
-                        <h2>Disciplined procurement.</h2>
-                    </div>
-                    <p class="section-intro">
-                        A transparent process connecting buyer specifications with reliable Indian stone processing lines.
-                    </p>
-                </div>
-
-                <div class="workflow-grid">
-                    <div class="workflow-card">
-                        <div class="workflow-step">01 / Specification</div>
-                        <h3>Requirement Review</h3>
-                        <p>Defining colour tone, dimensions, thickness tolerance, edge profiles, and application requirements.</p>
-                    </div>
-
-                    <div class="workflow-card">
-                        <div class="workflow-step">02 / Sourcing</div>
-                        <h3>Supplier Validation</h3>
-                        <p>Connecting with Indian quarry suppliers and processing facilities matching the required technical standards.</p>
-                    </div>
-
-                    <div class="workflow-card">
-                        <div class="workflow-step">03 / Inspection</div>
-                        <h3>Lot Verification</h3>
-                        <p>Visual check of grain uniformity, color continuity, and structural soundness across the specific production lot.</p>
-                    </div>
-
-                    <div class="workflow-card">
-                        <div class="workflow-step">04 / Calibrating</div>
-                        <h3>Finish Check</h3>
-                        <p>Verifying surface polish gloss, honed smoothness, or thermal flame texture, alongside dimensional tolerances.</p>
-                    </div>
-
-                    <div class="workflow-card">
-                        <div class="workflow-step">05 / Logistics</div>
-                        <h3>Export Packaging</h3>
-                        <p>Coordinating seaworthy fumigated wooden crate packaging and container loading for safe international transit.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- STATEMENT -->
-        <section class="statement dark-section">
-            <div class="container statement-grid">
-                <div>
-                    <div class="eyebrow">Material thinking</div>
-                </div>
-                <div>
-                    <h2>Natural variation deserves precise specification.</h2>
-                    <div class="statement-copy">
-                        <p>
-                            Granite is a natural material. Colour, grain, mineral structure, finish and surface characteristics can vary between blocks and lots.
-                        </p>
-                        <p>
-                            That is why we treat specification as an essential part of the sourcing process — not simply as a product name.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 03 / B2B CUSTOMERS -->
-        <section id="b2b">
-            <div class="container">
-                <div class="section-header">
-                    <div>
-                        <div class="eyebrow">03 / B2B</div>
-                        <h2>Who we work with.</h2>
-                    </div>
-                    <p class="section-intro">
-                        Different buyers require different formats, specifications and commercial approaches.
-                    </p>
-                </div>
-
-                <div class="audience-grid">
-                    <article class="audience-card">
-                        <div class="audience-number">01</div>
-                        <div class="audience-body">
-                            <h3>Stone Fabricators</h3>
-                            <p>Calibrated slabs ready for cutting, edge profiling, and finished countertop or vanity fabrication.</p>
-                        </div>
-                    </article>
-
-                    <article class="audience-card">
-                        <div class="audience-number">02</div>
-                        <div class="audience-body">
-                            <h3>Importers &amp; Distributors</h3>
-                            <p>Container-load Gangsaw and cutter slab supply for companies serving their regional markets.</p>
-                        </div>
-                    </article>
-
-                    <article class="audience-card">
-                        <div class="audience-number">03</div>
-                        <div class="audience-body">
-                            <h3>Architects &amp; Designers</h3>
-                            <p>Material exploration around aesthetic nuance, surface finishes, and technical suitability.</p>
-                        </div>
-                    </article>
-
-                    <article class="audience-card">
-                        <div class="audience-number">04</div>
-                        <div class="audience-body">
-                            <h3>Project Buyers</h3>
-                            <p>Volume stone sourcing for cut-to-size cladding, flooring tiles, and architectural specifications.</p>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <!-- FINISHES & SPECS -->
-        <section id="specs">
-            <div class="container">
-                <div class="section-header">
-                    <div>
-                        <div class="eyebrow">Technical Reference</div>
-                        <h2>Surface finishes &amp; formats.</h2>
-                    </div>
-                    <p class="section-intro">
-                        Granite surface characteristics can be tailored based on interior or exterior architectural requirements.
-                    </p>
-                </div>
-
-                <div class="tech-spec-layout">
-                    
-                    <div class="tech-spec-box">
-                        <h3>Available Surface Finishes</h3>
-                        <p class="box-sub">Tactile and visual surface treatments available for Indian granite:</p>
-                        
-                        <table class="spec-table">
-                            <tbody>
-                                <tr>
-                                    <th>Polished</th>
-                                    <td>High specular gloss with rich colour depth. Recommended for countertops, vanities, and interior cladding.</td>
-                                </tr>
-                                <tr>
-                                    <th>Honed</th>
-                                    <td>Smooth, non-reflective matte satin surface. Ideal for low-glare flooring, walls, and contemporary spaces.</td>
-                                </tr>
-                                <tr>
-                                    <th>Flamed</th>
-                                    <td>High-temperature textured thermal finish. Provides slip resistance for exterior paving and walkways.</td>
-                                </tr>
-                                <tr>
-                                    <th>Leathered</th>
-                                    <td>Subtle undulating tactile texture with a satin sheen. Resists fingerprints and highlights natural stone veins.</td>
-                                </tr>
-                                <tr>
-                                    <th>Bush-Hammered</th>
-                                    <td>Uniform mechanical pitting for heavy-duty outdoor grip and architectural facades.</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-
-                    <div class="tech-spec-box">
-                        <h3>Formats &amp; Thickness Standards</h3>
-                        <p class="box-sub">Export dimensions and standard thickness specifications:</p>
-                        
-                        <table class="spec-table">
-                            <tbody>
-                                <tr>
-                                    <th>Gangsaw Slabs</th>
-                                    <td>Approx. 2800+ mm length &times; 1600+ mm height. Ideal for large seamless countertops and full-height cladding.</td>
-                                </tr>
-                                <tr>
-                                    <th>Cutter Slabs</th>
-                                    <td>Approx. 1800+ mm length &times; 650+ mm height. Economical format for stairs, sills, and cut pieces.</td>
-                                </tr>
-                                <tr>
-                                    <th>Calibrated Tiles</th>
-                                    <td>Standard dimensions (300&times;300, 600&times;300, 600&times;600 mm) for precision flooring and walling.</td>
-                                </tr>
-                                <tr>
-                                    <th>Standard Thickness</th>
-                                    <td>20 mm (&plusmn;1mm) and 30 mm (&plusmn;1mm) standard export. 40+ mm available for custom architectural projects.</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- 04 / ABOUT -->
-        <section id="about" class="about">
-            <div class="container about-grid">
-                <div>
-                    <div class="eyebrow">04 / About Zordha</div>
-                    <h2 class="about-title">An India-based stone business.</h2>
-                </div>
-
-                <div class="about-copy">
-                    <p>
-                        Zordha Industries is based in Kottayam, Kerala, India, and is developing an international natural stone sourcing business.
-                    </p>
-                    <p>
-                        Our focus is on building reliable relationships between international B2B requirements and suitable Indian stone supply.
-                    </p>
-                    <p>
-                        We are building the business step by step, with emphasis on material understanding, supplier validation, specification, quality and commercially viable international supply.
-                    </p>
-                </div>
-            </div>
-        </section>
-
         <!-- 05 / COMMERCIAL ENQUIRY -->
         <section id="enquire" class="enquiry-section">
             <div class="container enquiry-grid">
                 <div class="enquiry-info">
-                    <div class="eyebrow">05 / Commercial Enquiry</div>
+                    <div class="eyebrow">03 / Commercial Enquiry</div>
                     <h2>Discuss a requirement.</h2>
                     <p>
-                        Submit your specifications, dimensions, finish preferences, and destination port. We will review availability, production timelines, and provide commercial details.
+                        Submit your specifications, dimensions, finish preferences, and destination port. We review availability, production timelines, and provide commercial details promptly.
                     </p>
 
-                    <div class="enquiry-contact-card">
-                        <div class="enquiry-contact-label">Direct Communication</div>
-                        <a href="mailto:info@zordhaindustries.com" class="enquiry-contact-val">info@zordhaindustries.com</a>
+                    <div class="enquiry-contact-grid">
+                        <a href="https://wa.me/919180575785?text=Hello%20Zordha%20Industries%2C%20I%E2%80%99m%20interested%20in%20your%20natural%20stone%20products.%20I%E2%80%99d%20like%20to%20discuss%20my%20requirement." target="_blank" rel="noopener noreferrer" class="enquiry-channel-card" aria-label="WhatsApp conversation with Zordha Industries">
+                            <div class="enquiry-channel-header">
+                                <svg viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.196 8.196 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24m4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.03-1.25-.75-.67-1.26-1.5-1.41-1.75-.15-.25-.02-.39.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.78 2.72 4.31 3.81.6.26 1.07.42 1.44.54.61.19 1.16.17 1.6.1.49-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.07-.1-.23-.17-.48-.29"/></svg>
+                                <span>WhatsApp (Direct)</span>
+                            </div>
+                            <div class="enquiry-channel-val">+91 9180575785</div>
+                            <div class="enquiry-channel-sub">Start direct chat &rarr;</div>
+                        </a>
+
+                        <a href="mailto:info@zordhaindustries.com" class="enquiry-channel-card" aria-label="Email Zordha Industries">
+                            <div class="enquiry-channel-header">
+                                <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                                <span>Official Email</span>
+                            </div>
+                            <div class="enquiry-channel-val">info@zordhaindustries.com</div>
+                            <div class="enquiry-channel-sub">Send requirement &rarr;</div>
+                        </a>
+
+                        <a href="https://www.instagram.com/zordhaindustries" target="_blank" rel="noopener noreferrer" class="enquiry-channel-card" aria-label="Zordha Industries on Instagram">
+                            <div class="enquiry-channel-header">
+                                <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                                <span>Instagram</span>
+                            </div>
+                            <div class="enquiry-channel-val">@zordhaindustries</div>
+                            <div class="enquiry-channel-sub">View portfolio &rarr;</div>
+                        </a>
+
+                        <a href="https://www.facebook.com/zordhaindustries" target="_blank" rel="noopener noreferrer" class="enquiry-channel-card" aria-label="Zordha Industries on Facebook">
+                            <div class="enquiry-channel-header">
+                                <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                                <span>Facebook</span>
+                            </div>
+                            <div class="enquiry-channel-val">Zordha Industries</div>
+                            <div class="enquiry-channel-sub">Official page &rarr;</div>
+                        </a>
                     </div>
                 </div>
 
@@ -1992,7 +2342,13 @@
 
                         <div class="form-footer">
                             <p class="form-note">Requirement details are handled confidentially for commercial stone quotation.</p>
-                            <button type="submit" class="btn-submit">Send Enquiry</button>
+                            <div class="form-actions-group">
+                                <a href="https://wa.me/919180575785?text=Hello%20Zordha%20Industries%2C%20I%E2%80%99m%20interested%20in%20your%20natural%20stone%20products.%20I%E2%80%99d%20like%20to%20discuss%20my%20requirement." target="_blank" rel="noopener noreferrer" class="btn-whatsapp-outline" aria-label="Direct WhatsApp enquiry">
+                                    <svg viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.196 8.196 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24m4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.03-1.25-.75-.67-1.26-1.5-1.41-1.75-.15-.25-.02-.39.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.78 2.72 4.31 3.81.6.26 1.07.42 1.44.54.61.19 1.16.17 1.6.1.49-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.07-.1-.23-.17-.48-.29"/></svg>
+                                    <span>WhatsApp</span>
+                                </a>
+                                <button type="submit" class="btn-submit">Send Enquiry</button>
+                            </div>
                         </div>
                     </form>
 
@@ -2051,6 +2407,10 @@
 
                     <div class="modal-action-row">
                         <button type="button" class="btn-submit" id="modal-request-btn" style="width:100%; text-align:center;">Request this material in enquiry &rarr;</button>
+                        <a id="modal-whatsapp-btn" href="https://wa.me/919180575785?text=Hello%20Zordha%20Industries%2C%20I%E2%80%99m%20interested%20in%20your%20natural%20stone%20products.%20I%E2%80%99d%20like%20to%20discuss%20my%20requirement." target="_blank" rel="noopener noreferrer" class="btn-whatsapp-outline" style="width:100%; text-align:center;" aria-label="Enquire via WhatsApp">
+                            <svg viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.196 8.196 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24m4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.03-1.25-.75-.67-1.26-1.5-1.41-1.75-.15-.25-.02-.39.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.78 2.72 4.31 3.81.6.26 1.07.42 1.44.54.61.19 1.16.17 1.6.1.49-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.07-.1-.23-.17-.48-.29"/></svg>
+                            <span>Enquire via WhatsApp</span>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -2059,6 +2419,9 @@
 
     <!-- Floating Contact Rail -->
     <div class="floating-contact-rail" id="floating-contact-rail">
+        <a href="https://wa.me/919180575785?text=Hello%20Zordha%20Industries%2C%20I%E2%80%99m%20interested%20in%20your%20natural%20stone%20products.%20I%E2%80%99d%20like%20to%20discuss%20my%20requirement." target="_blank" rel="noopener noreferrer" class="contact-rail-btn whatsapp-btn" aria-label="Chat on WhatsApp with Zordha Industries">
+            <svg viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.196 8.196 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24m4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.03-1.25-.75-.67-1.26-1.5-1.41-1.75-.15-.25-.02-.39.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.78 2.72 4.31 3.81.6.26 1.07.42 1.44.54.61.19 1.16.17 1.6.1.49-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.07-.1-.23-.17-.48-.29"/></svg>
+        </a>
         <a href="mailto:info@zordhaindustries.com?subject=Natural%20Stone%20Enquiry" class="contact-rail-btn" aria-label="Email Zordha Industries">
             <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
         </a>
@@ -2071,7 +2434,7 @@
         <div class="container footer-grid">
             <div>
                 <div class="footer-logo">ZORDHA.</div>
-                <div class="footer-small">Natural Stone · India</div>
+                <div class="footer-small">Natural Stone · India<br>B2B Granite &amp; Architectural Sourcing</div>
             </div>
 
             <div>
@@ -2079,25 +2442,54 @@
                 <ul class="footer-links">
                     <li><a href="#materials">Materials</a></li>
                     <li><a href="#sourcing">Sourcing &amp; QC</a></li>
-                    <li><a href="#b2b">B2B</a></li>
+                    <li><a href="#b2b">B2B Solutions</a></li>
                     <li><a href="#specs">Finishes &amp; Specs</a></li>
-                    <li><a href="#about">About</a></li>
+                    <li><a href="#about">About Zordha</a></li>
                 </ul>
             </div>
 
             <div>
-                <div class="footer-label">Office</div>
-                <div class="footer-address">
-                    B28, Anjanasree Arcade<br>
-                    Annankunnu Road, Nagampadam<br>
-                    Kottayam, Kerala 686001<br>
-                    India
-                </div>
+                <div class="footer-label">Direct Contact</div>
+                <ul class="footer-contact-list">
+                    <li class="footer-contact-item">
+                        <span class="footer-contact-type">WhatsApp (Direct)</span>
+                        <a href="https://wa.me/919180575785?text=Hello%20Zordha%20Industries%2C%20I%E2%80%99m%20interested%20in%20your%20natural%20stone%20products.%20I%E2%80%99d%20like%20to%20discuss%20my%20requirement." target="_blank" rel="noopener noreferrer" class="footer-contact-val">+91 9180575785</a>
+                    </li>
+                    <li class="footer-contact-item">
+                        <span class="footer-contact-type">Official Email</span>
+                        <a href="mailto:info@zordhaindustries.com" class="footer-contact-val">info@zordhaindustries.com</a>
+                    </li>
+                </ul>
             </div>
 
             <div>
-                <div class="footer-label">Contact</div>
-                <a href="mailto:info@zordhaindustries.com" class="footer-email">info@zordhaindustries.com</a>
+                <div class="footer-label">Connect &amp; Social</div>
+                <ul class="footer-social-list">
+                    <li>
+                        <a href="https://wa.me/919180575785?text=Hello%20Zordha%20Industries%2C%20I%E2%80%99m%20interested%20in%20your%20natural%20stone%20products.%20I%E2%80%99d%20like%20to%20discuss%20my%20requirement." target="_blank" rel="noopener noreferrer" class="footer-social-link">
+                            <svg viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.196 8.196 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24m4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.03-1.25-.75-.67-1.26-1.5-1.41-1.75-.15-.25-.02-.39.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.78 2.72 4.31 3.81.6.26 1.07.42 1.44.54.61.19 1.16.17 1.6.1.49-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.07-.1-.23-.17-.48-.29"/></svg>
+                            <span>WhatsApp Sourcing</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/zordhaindustries" target="_blank" rel="noopener noreferrer" class="footer-social-link">
+                            <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                            <span>Instagram</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/zordhaindustries" target="_blank" rel="noopener noreferrer" class="footer-social-link">
+                            <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                            <span>Facebook</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="mailto:info@zordhaindustries.com" class="footer-social-link">
+                            <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                            <span>Email Desk</span>
+                        </a>
+                    </li>
+                </ul>
             </div>
         </div>
 
@@ -2186,6 +2578,7 @@
             const modalStoneFinishes = document.getElementById('modal-stone-finishes');
             const modalStoneFormats = document.getElementById('modal-stone-formats');
             const modalRequestBtn = document.getElementById('modal-request-btn');
+            const modalWhatsAppBtn = document.getElementById('modal-whatsapp-btn');
             const materialSelect = document.getElementById('material-select');
 
             let currentMaterialName = "";
@@ -2201,6 +2594,11 @@
                 modalStoneCat.textContent = data.category;
                 modalStoneFinishes.textContent = data.finishes;
                 modalStoneFormats.textContent = data.formats;
+
+                if (modalWhatsAppBtn) {
+                    const waText = `Hello Zordha Industries, I’m interested in ${data.name} natural granite. I’d like to discuss my requirement.`;
+                    modalWhatsAppBtn.href = `https://wa.me/919180575785?text=${encodeURIComponent(waText)}`;
+                }
 
                 modal.classList.add('open');
                 modal.setAttribute('aria-hidden', 'false');
@@ -2286,6 +2684,46 @@
                         }
                     }
                 });
+            }
+
+            // Page Loader Lifecycle
+            const pageLoader = document.getElementById('page-loader');
+            if (pageLoader) {
+                const loadStartTime = performance.now ? performance.now() : Date.now();
+                const minDisplayTime = 420; // Ensure seamless visual transition without jarring micro-flash
+                const maxSafetyTimeout = 2500; // Never stall visitor even if an external asset is slow
+                let loaderDismissed = false;
+
+                function dismissLoader() {
+                    if (loaderDismissed) return;
+                    loaderDismissed = true;
+
+                    const now = performance.now ? performance.now() : Date.now();
+                    const elapsed = now - loadStartTime;
+                    const delay = Math.max(0, minDisplayTime - elapsed);
+
+                    setTimeout(() => {
+                        pageLoader.classList.add('loader-fade-out');
+                        pageLoader.setAttribute('aria-hidden', 'true');
+                        document.body.classList.remove('loading-active');
+
+                        const finishRemoval = () => {
+                            pageLoader.style.display = 'none';
+                            pageLoader.removeEventListener('transitionend', finishRemoval);
+                        };
+                        pageLoader.addEventListener('transitionend', finishRemoval);
+                        setTimeout(finishRemoval, 700);
+                    }, delay);
+                }
+
+                if (document.readyState === 'complete') {
+                    dismissLoader();
+                } else {
+                    window.addEventListener('load', dismissLoader);
+                }
+
+                // Safety fallback timeout
+                setTimeout(dismissLoader, maxSafetyTimeout);
             }
         })();
     </script>
